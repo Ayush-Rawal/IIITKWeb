@@ -1,0 +1,25 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark navbar-bg-primary" role="navbar"> -->
+<!-- <img src="../../assets/iiitklogo.gif" alt="iiit kota logo" class="navbar-logo" /> -->
+<!-- <div class="link-container"> -->
+<!-- <button *ngFor="let link of content.links" (mouseenter)="setCurrentLink(link)" (mouseout)="setCurrentLink(null)" class="btn btn-lg btn-outline-primary main-link" [routerLink]="[link.link]">{{link.display}}</button> -->
+<!-- </div> -->
+<!-- </nav> -->
+<!-- <div *ngIf="currentLink" class="sublink-container"> -->
+<!-- <button *ngFor="let sublink of currentLink.sublinks" [routerLink]="sublink.sublink" class="btn btn-outline-primary sublink">Hello {{sublink.display}}</button> -->
+<!-- </div> -->
+
+<!-- <div role="iiitk-logo-container"> -->
+<!-- <img src="../../assets/iiitklogo.gif" alt="IIIT Kota logo" /> -->
+<!-- </div> -->
+<nav class="navbar navbar-expand-lg navbar-bg-primary">
+    <ul id="menu">
+        <li *ngFor="let link of content.links" [routerLink]="[link.link]">
+            <a>{{link.display}}</a>
+            <ul *ngIf="link.sublinks" class="hidden">
+                <li *ngFor="let sublink of link.sublinks" [routerLink]="[sublink.link]">
+                    <a>{{sublink.display}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>

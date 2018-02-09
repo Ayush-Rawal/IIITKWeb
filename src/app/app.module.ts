@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminPageComponent
+    AdminPageComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
