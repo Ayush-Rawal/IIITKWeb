@@ -18,6 +18,18 @@ export class NavBarComponent {
           {
             "display": "Link 1",
             "link": "/"
+          },
+          {
+            "display": "Link 1",
+            "link": "/"
+          },
+          {
+            "display": "Link 1",
+            "link": "/"
+          },
+          {
+            "display": "Link 1",
+            "link": "/"
           }
         ]
       },
