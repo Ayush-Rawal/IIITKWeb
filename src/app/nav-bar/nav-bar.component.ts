@@ -18,9 +18,6 @@ export class NavBarComponent {
           {
             "display": "Link 1",
             "link": "/"
-          }, {
-            "display": "Link 1",
-            "link": "/"
           }
         ]
       },
@@ -47,18 +44,30 @@ export class NavBarComponent {
           }, {
             "display": "Link 3",
             "link": "/about"
+          }, {
+            "display": "Link 3",
+            "link": "/about"
           }
         ]
-      },
+      },{
+        "display": "Link 4",
+        "link": "/contact",
+        "sublinks": [
+          {
+            "display": "Link 4",
+            "link": "/contact"
+          }, {
+            "display": "Link 4",
+            "link": "/contact"
+          }, {
+            "display": "Link 4",
+            "link": "/contact"
+          }, {
+            "display": "Link 4",
+            "link": "/contact"
+          }
+        ]
+      }
     ]
-  }
-
-  // private hovered = new Array(this.content.links.length).fill(false);
-  private currentLink = null;
-  // @Input('content') content:any ;
-
-  setCurrentLink(link){
-    this.currentLink = link;
-    console.log('Current: ',this.currentLink);
   }
 }
