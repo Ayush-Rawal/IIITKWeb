@@ -7,23 +7,19 @@ import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
-<<<<<<< HEAD
 import { ImagesSlideComponent } from './images-slide/images-slide.component';
-=======
 import { NavBarComponent } from './nav-bar/nav-bar.component';
->>>>>>> 043b6acbc82a24678a30fcdb716427cae952d633
+import { PaginatedDisplayComponent } from './paginated-display/paginated-display.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminPageComponent,
-<<<<<<< HEAD
     AboutBarComponent,
-    ImagesSlideComponent
-=======
-    NavBarComponent
->>>>>>> 043b6acbc82a24678a30fcdb716427cae952d633
+    ImagesSlideComponent,
+    NavBarComponent,
+    PaginatedDisplayComponent
   ],
   imports: [
     BrowserModule,
