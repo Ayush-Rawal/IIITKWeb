@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class PaginatedDisplayComponent {
 
   constructor() { }
-  private content = {
+  public content = {
     title:"Title",
     btnDisp:"",
     btnLink:"",
@@ -52,10 +52,10 @@ export class PaginatedDisplayComponent {
       }
     ] 
   }
-  private currPage = 1;
-  private perPage = 6;
-  private maxPage = Math.ceil(this.content.items.length/this.perPage);
-  private currList = this.content.items.slice((this.currPage-1) * this.perPage, this.currPage * this.perPage);
+  public currPage = 1;
+  public perPage = 6;
+  public maxPage = Math.ceil(this.content.items.length/this.perPage);
+  public currList = this.content.items.slice((this.currPage-1) * this.perPage, this.currPage * this.perPage);
 
   changePage = (page) => {
     this.currPage = this.currPage + page;
