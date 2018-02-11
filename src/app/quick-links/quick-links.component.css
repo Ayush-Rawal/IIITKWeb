@@ -1,0 +1,14 @@
+.quick-links-font{
+    color:orange;
+    font-size: 1.8em;
+    
+}
+.quick-links-display{
+    display:flex; 
+    flex-flow:row wrap
+}
+.quick-link-links{
+    color:white;
+    font-size: 1.0em;
+
+}

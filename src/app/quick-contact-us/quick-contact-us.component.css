@@ -1,0 +1,20 @@
+.quick-contact-us-font{
+    color:orange;
+    font-size: 1.8em;
+    
+}
+.quick-contact-us-font2{
+    color:white;
+    font-size: 1.0em;
+    
+}
+.quick-contact-us-display{
+    display:flex; 
+    flex-flow:column wrap
+}
+
+a:hover{
+    color:red;
+    font-size: 2.0em;
+    text-decoration: none;
+}

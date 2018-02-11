@@ -49,6 +49,10 @@ ul span a:hover+.hidden,
 
 /*Strip the ul of padding and list styling*/
 
+nav{
+    z-index: 1;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -186,7 +190,7 @@ input[type=checkbox]:checked~#menu {
 
 /*Responsive Styles*/
 
-@media screen and (max-width: 50%) {
+@media screen and (max-width: 760px) {
     /*Make dropdown links appear inline*/
     ul {
         position: static;
