@@ -1,0 +1,38 @@
+<div>
+    <div role="title-container">
+        {{content.title}}
+    </div>
+    <div role="feed-container">
+        <span *ngFor="let item of this.currList" [routerLink]="[item.link]" class="event">
+        {{item.content}}
+      </span>
+    </div>
+    <div role="btn-container">
+        <button class="btn btn-primary-outline" [routerLink]="[content.btnLink]">{{content.btnDisp}}</button>
+        <div role="page-container">
+            <ul class="pagination">
+                <li class="page-item" (click)=changePage(1-this.currPage)>
+                    <a class="page-link">&laquo;</a>
+                </li>
+                <li class="page-item" (click)=changePage(-2) [hidden]="this.currPage-2<=0">
+                    <a class="page-link">{{this.currPage-2}}</a>
+                </li>
+                <li class="page-item" (click)=changePage(-1) [hidden]="this.currPage-1<=0">
+                    <a class="page-link">{{this.currPage-1}}</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link">{{this.currPage}}</a>
+                </li>
+                <li class="page-item" (click)=changePage(1) [hidden]="this.currPage+1>this.maxPage">
+                    <a class="page-link">{{this.currPage+1}}</a>
+                </li>
+                <li class="page-item" (click)=changePage(+1) [hidden]="this.currPage+2>=this.maxPage">
+                    <a class="page-link">{{this.currPage+2}}</a>
+                </li>
+                <li class="page-item" (click)=changePage(this.maxPage-this.currPage)>
+                    <a class="page-link">&raquo;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

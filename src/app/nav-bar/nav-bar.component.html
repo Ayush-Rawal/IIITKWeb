@@ -3,12 +3,16 @@
     <input type="checkbox" id="show-menu" role="button">
     <ul id="menu">
         <li *ngFor="let link of content.links" [routerLink]="[link.link]">
-            <a>{{link.display}}</a>
+            <a>{{link.name}}</a>
             <ul *ngIf="link.sublinks" class="hidden">
                 <li *ngFor="let sublink of link.sublinks" [routerLink]="[sublink.link]">
-                    <a>{{sublink.display}}</a>
+                    <a>{{sublink.name}}</a>
                 </li>
             </ul>
         </li>
     </ul>
+<<<<<<< HEAD
 </nav>
+=======
+</nav>
+>>>>>>> beb797b15c751cbd9eee8ba42a38c24cd48c68bd

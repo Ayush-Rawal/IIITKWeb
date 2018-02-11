@@ -12,70 +12,70 @@ export class NavBarComponent {
   content = {
     "links": [
       {
-        "display": "Link 1",
+        "name": "Link 1",
         "link": "/",
         "sublinks": [
           {
-            "display": "Link 1",
+            "name": "Link 1",
             "link": "/"
           },
           {
-            "display": "Link 1",
+            "name": "Link 1",
             "link": "/"
           },
           {
-            "display": "Link 1",
+            "name": "Link 1",
             "link": "/"
           },
           {
-            "display": "Link 1",
+            "name": "Link 1",
             "link": "/"
           }
         ]
       },
       {
-        "display": "Link 2",
+        "name": "Link 2",
         "link": "/admin",
         "sublinks": [
           {
-            "display": "Link 2",
+            "name": "Link 2",
             "link": "/admin"
           }, {
-            "display": "Link 2",
+            "name": "Link 2",
             "link": "/admin"
           }
         ]
       },
       {
-        "display": "Link 3",
+        "name": "Link 3",
         "link": "/about",
         "sublinks": [
           {
-            "display": "Link 3",
+            "name": "Link 3",
             "link": "/about"
           }, {
-            "display": "Link 3",
+            "name": "Link 3",
             "link": "/about"
           }, {
-            "display": "Link 3",
+            "name": "Link 3",
             "link": "/about"
           }
         ]
       },{
-        "display": "Link 4",
+        "name": "Link 4",
         "link": "/contact",
         "sublinks": [
           {
-            "display": "Link 4",
+            "name": "Link 4",
             "link": "/contact"
           }, {
-            "display": "Link 4",
+            "name": "Link 4",
             "link": "/contact"
           }, {
-            "display": "Link 4",
+            "name": "Link 4",
             "link": "/contact"
           }, {
-            "display": "Link 4",
+            "name": "Link 4",
             "link": "/contact"
           }
         ]
