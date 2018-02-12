@@ -52,7 +52,6 @@ export class PaginatedDisplayComponent {
       }
     ]
   }
-
   public currPage = 1;
   public perPage = 6;
   public maxPage = Math.ceil(this.content.items.length/this.perPage);
