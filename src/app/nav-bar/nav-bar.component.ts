@@ -23,10 +23,10 @@ export class NavBarComponent {
             "name": "Link 1",
             "link": "/"
           },
-          {
-            "name": "Link 1",
-            "link": "/"
-          },
+                          {
+                            "name": "Link 1jkjkshdkjasbfknhjkadfjkbhhjghcfgcjhnkbvcxdfghjkmnbvcfghjkmnbvcghjklkjhgfddfghjkjbvbnm",
+                            "link": "/"
+                          },
           {
             "name": "Link 1",
             "link": "/"

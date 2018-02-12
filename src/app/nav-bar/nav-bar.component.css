@@ -1,6 +1,6 @@
 /*Strip the ul of padding and list styling*/
 
-nav{
+nav {
     z-index: 1;
 }
 
@@ -83,16 +83,21 @@ li ul {
 
 /*Make dropdown links vertical*/
 
-li ul li {
+li ul div {
     display: block;
     float: none;
     flex: 1 200px;
 }
 
+div[role="sublink-container"] {
+    min-width: inherit;
+    width: 100%;
+}
+
 
 /*Prevent text wrapping*/
 
-li ul li a {
+li ul div a {
     width: inherit;
     min-width: 100px;
     padding: 0 20px;

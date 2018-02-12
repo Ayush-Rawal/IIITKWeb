@@ -9,12 +9,9 @@ import { AppComponent } from './app.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { ImagesSlideComponent } from './images-slide/images-slide.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-<<<<<<< HEAD
 import { QuickLinksComponent } from './quick-links/quick-links.component';
 import { QuickContactUsComponent } from './quick-contact-us/quick-contact-us.component';
-=======
 import { PaginatedDisplayComponent } from './paginated-display/paginated-display.component';
->>>>>>> beb797b15c751cbd9eee8ba42a38c24cd48c68bd
 
 
 @NgModule({
@@ -24,12 +21,9 @@ import { PaginatedDisplayComponent } from './paginated-display/paginated-display
     AboutBarComponent,
     ImagesSlideComponent,
     NavBarComponent,
-<<<<<<< HEAD
     QuickLinksComponent,
-    QuickContactUsComponent
-=======
+    QuickContactUsComponent,
     PaginatedDisplayComponent
->>>>>>> beb797b15c751cbd9eee8ba42a38c24cd48c68bd
   ],
   imports: [
     BrowserModule,
