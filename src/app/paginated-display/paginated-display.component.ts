@@ -1,9 +1,24 @@
 import { Component } from '@angular/core';
+import {
+  style,
+  trigger,
+  transition,
+  animate,
+  state
+} from '@angular/animations';
 
 @Component({
   selector: 'paginated-display',
   templateUrl: './paginated-display.component.html',
-  styleUrls: ['./paginated-display.component.css']
+  styleUrls: ['./paginated-display.component.css'],
+  animations:[
+    trigger('fade',[
+      transition('void=>*',[
+        style({opacity:0}),
+        animate(3500)
+      ])
+    ])
+  ]
 })
 export class PaginatedDisplayComponent {
 

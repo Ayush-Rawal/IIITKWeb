@@ -5,7 +5,7 @@
     <div role="body" class="container">
 
         <div role="feed-container">
-            <span *ngFor="let item of this.currList" [routerLink]="[item.link]" class="event">
+            <span @fade *ngFor="let item of this.currList" [routerLink]="[item.link]" class="event">
           {{item.content}}
         </span>
         </div>
