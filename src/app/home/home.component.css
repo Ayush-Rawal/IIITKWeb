@@ -1,0 +1,29 @@
+div[role=footer] {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 2rem;
+    background-color: #084386;
+}
+
+quick-links {
+    flex: 1;
+}
+
+quick-contact-us {
+    flex: 1;
+}
+
+div[role=body] {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: auto;
+}
+
+paginated-display {
+    flex: 1;
+    max-width: 40%;
+    margin: auto;
+    padding: auto;
+}

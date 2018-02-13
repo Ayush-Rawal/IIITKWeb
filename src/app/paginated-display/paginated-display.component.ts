@@ -74,8 +74,6 @@ export class PaginatedDisplayComponent {
 
   changePage = (page) => {
     this.currPage = this.currPage + page;
-    console.log("clicked ", "curr page: ", this.currPage)
-    console.log("splicing: from:",(this.currPage-1) * this.perPage,"to:",this.currPage * this.perPage)
     this.currList = this.content.items.slice((this.currPage-1) * this.perPage, this.currPage * this.perPage);
   }
 
