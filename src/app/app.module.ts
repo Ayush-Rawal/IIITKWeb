@@ -13,7 +13,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
 import { QuickContactUsComponent } from './quick-contact-us/quick-contact-us.component';
 import { PaginatedDisplayComponent } from './paginated-display/paginated-display.component';
-
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +24,15 @@ import { PaginatedDisplayComponent } from './paginated-display/paginated-display
     NavBarComponent,
     QuickLinksComponent,
     QuickContactUsComponent,
-    PaginatedDisplayComponent
+    PaginatedDisplayComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
+      {path:'', component:HomeComponent},
       {path:'admin', component:AdminPageComponent}
     ]),
   BrowserAnimationsModule
