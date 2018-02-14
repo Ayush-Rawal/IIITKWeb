@@ -65,9 +65,13 @@ div[role="page-container"] {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
-    align-self: center;
+    align-items: center;
 }
 
 li {
     flex: 1;
+}
+
+ul[role=pagination] {
+    margin: 0.1rem 0;
 }

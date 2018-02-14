@@ -37,8 +37,8 @@ li a {
     line-height: 50px;
     font-size: x-large;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #008cba;
-    background: #f3f3f3;
+    color: #fff;
+    background: #084386;
     text-decoration: none;
 }
 
@@ -55,7 +55,7 @@ li:hover a {
 
 li:hover ul a {
     background: #f3f3f3;
-    color: #008cba;
+    color: #084386;
     height: 40px;
     line-height: 40px;
     flex: 1;
@@ -66,7 +66,7 @@ li:hover ul a {
 /*Hover state for dropdown links*/
 
 li:hover ul a:hover {
-    background: #008cba;
+    background: #084386;
     color: #fff;
 }
 
