@@ -29,7 +29,7 @@
                     <li class="page-item" role="page-btn" (click)=changePage(1) [hidden]="this.currPage+1>this.maxPage">
                         <a class="page-link">{{this.currPage+1}}</a>
                     </li>
-                    <li class="page-item" role="page-btn" (click)=changePage(+1) [hidden]="this.currPage+2>=this.maxPage">
+                    <li class="page-item" role="page-btn" (click)=changePage(2) [hidden]="this.currPage+2>this.maxPage">
                         <a class="page-link">{{this.currPage+2}}</a>
                     </li>
                     <li class="page-item" role="page-btn" (click)=changePage(this.maxPage-this.currPage)>

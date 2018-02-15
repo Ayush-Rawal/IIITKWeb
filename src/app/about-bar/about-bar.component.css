@@ -1,5 +1,7 @@
-.about-bar
-{
+.about-bar {
     background-color: #084386;
-    
+}
+
+* {
+    color: white;
 }

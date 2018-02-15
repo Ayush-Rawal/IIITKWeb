@@ -1,5 +1,4 @@
 div[role=logo] {
-    min-width: 98vw;
     max-width: 100vw;
     height: 100px;
     padding: 0;
@@ -50,4 +49,10 @@ paginated-display {
     max-width: 40%;
     margin: auto;
     padding: auto;
+}
+
+nav-bar {
+    z-index: 1;
+    position: -moz-sticky;
+    position: sticky;
 }
