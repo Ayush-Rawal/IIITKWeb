@@ -1,14 +1,24 @@
-.quick-links-font{
-    color:orange;
+.quick-links-font {
+    color: orange;
     font-size: 1.8em;
-    
 }
-.quick-links-display{
-    display:flex; 
-    flex-flow:row wrap
-}
-.quick-link-links{
-    color:white;
-    font-size: 1.0em;
 
+.quick-links-display {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.quick-link-links {
+    color: white;
+    font-size: 1.0em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 0.65rem;
+}
+
+ul>li {
+    margin: 0.5rem 0;
 }

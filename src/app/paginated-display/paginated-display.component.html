@@ -13,7 +13,7 @@
         <div role="btn-container">
             <button class="btn btn-primary btn-sm" [routerLink]="[content.btnLink]">{{content.btnDisp}}</button>
             <div role="page-container">
-                <ul class="pagination">
+                <ul class="pagination" role="pagination">
                     <li class="page-item" role="page-btn" (click)=changePage(1-this.currPage)>
                         <a class="page-link">&laquo;</a>
                     </li>
@@ -23,7 +23,7 @@
                     <li class="page-item" role="page-btn" (click)=changePage(-1) [hidden]="this.currPage-1<=0">
                         <a class="page-link">{{this.currPage-1}}</a>
                     </li>
-                    <li class="page-item" role="page-btn">
+                    <li class="page-item active" role="page-btn">
                         <a class="page-link">{{this.currPage}}</a>
                     </li>
                     <li class="page-item" role="page-btn" (click)=changePage(1) [hidden]="this.currPage+1>this.maxPage">
