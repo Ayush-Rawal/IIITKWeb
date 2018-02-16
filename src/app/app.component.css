@@ -1,0 +1,43 @@
+div[role=logo] {
+    max-width: 100vw;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+div[role=logo]>img {
+    flex: 1;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+nav-bar {
+    z-index: 1;
+    position: -moz-sticky;
+    position: sticky;
+}
+
+div[role=footer] {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 2rem;
+    background-color: #084386;
+    padding-top: 2rem;
+}
+
+div[role=footer]>div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+quick-links {
+    flex: 1;
+}
+
+quick-contact-us {
+    flex: 1;
+}

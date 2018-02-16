@@ -78,6 +78,7 @@ li ul {
     align-items: flex-start;
     width: inherit;
     position: absolute;
+    min-width: 21em;
 }
 
 
