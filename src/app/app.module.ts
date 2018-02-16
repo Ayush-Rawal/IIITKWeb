@@ -14,6 +14,7 @@ import { QuickLinksComponent } from './quick-links/quick-links.component';
 import { QuickContactUsComponent } from './quick-contact-us/quick-contact-us.component';
 import { PaginatedDisplayComponent } from './paginated-display/paginated-display.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     QuickLinksComponent,
     QuickContactUsComponent,
     PaginatedDisplayComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
