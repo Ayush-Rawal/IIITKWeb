@@ -7,7 +7,7 @@
 	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
 	.st2{fill:none;}
 	.st3{font-family:'ArialMT';}
-	.st4{font-size:12px;}
+	.st4{font-size:13.2px;}
 	.st5{fill:#010101;}
 	.st6{font-family:'NirmalaUI';}
 	.st7{font-size:15px;}
@@ -17,7 +17,7 @@
 <line class="st1" x1="403.1" y1="39.1" x2="739" y2="39.1"/>
 <rect x="103" y="24.1" class="st2" width="266.4" height="21.3"/>
 <rect x="400.8" y="22.6" class="st2" width="289.2" height="17.9"/>
-<text transform="matrix(1.04 0 0 1.1 402 31.1355)" class="st3 st4">INDIAN INSTITUTE OF INFORMATION TEHNOLOGY KOTA</text>
+<text transform="matrix(0.9455 0 0 1 402 31.1355)" class="st3 st4">INDIAN INSTITUTE OF INFORMATION TECHNOLOGY KOTA</text>
 <g>
 	<polygon class="st5" points="341.3,39.8 342.3,36.6 347.8,36.6 346.5,39.8 	"/>
 	<g>

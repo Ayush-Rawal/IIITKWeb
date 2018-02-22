@@ -1,3 +1,4 @@
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutBarComponent } from './about-bar/about-bar.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -27,7 +28,8 @@ import { AboutComponent } from './about/about.component';
     QuickContactUsComponent,
     PaginatedDisplayComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { AboutComponent } from './about/about.component';
     RouterModule.forRoot([
       {path:'', component:HomeComponent},
       {path:'admin', component:AdminPageComponent},
-      {path:'about', component:AboutComponent}
+      {path:'about', component:AboutComponent},
+      {path:'contact-us',component:ContactUsComponent}
     ]),
   BrowserAnimationsModule
   ],
