@@ -23,10 +23,10 @@ export class NavBarComponent {
             "name": "Link 1",
             "link": "/"
           },
-                          {
-                            "name": "Link 1jkjkshdkjasbfknhjkadfjkbhhjghcfgcjhnkbvcxdfghjkmnbvcfghjkmnbvcghjklkjhgfddfghjkjbvbnm",
-                            "link": "/"
-                          },
+          {
+            "name": "Link 1",
+            "link": "/"
+          },
           {
             "name": "Link 1",
             "link": "/"
@@ -34,48 +34,48 @@ export class NavBarComponent {
         ]
       },
       {
-        "name": "Link 2",
+        "name": "Admin",
         "link": "/admin",
         "sublinks": [
           {
-            "name": "Link 2",
+            "name": "Admin",
             "link": "/admin"
           }, {
-            "name": "Link 2",
+            "name": "Admin",
             "link": "/admin"
           }
         ]
       },
       {
-        "name": "Link 3",
+        "name": "About us",
         "link": "/about",
         "sublinks": [
           {
-            "name": "Link 3",
+            "name": "About",
             "link": "/about"
           }, {
-            "name": "Link 3",
+            "name": "About",
             "link": "/about"
           }, {
-            "name": "Link 3",
+            "name": "About",
             "link": "/about"
           }
         ]
-      },{
-        "name": "Link 4",
+      }, {
+        "name": "Contact",
         "link": "/contact",
         "sublinks": [
           {
-            "name": "Link 4",
+            "name": "Contact",
             "link": "/contact"
           }, {
-            "name": "Link 4",
+            "name": "Contact",
             "link": "/contact"
           }, {
-            "name": "Link 4",
+            "name": "Contact",
             "link": "/contact"
           }, {
-            "name": "Link 4",
+            "name": "Contact",
             "link": "/contact"
           }
         ]

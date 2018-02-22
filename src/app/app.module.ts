@@ -35,7 +35,8 @@ import { AboutComponent } from './about/about.component';
     HttpModule,
     RouterModule.forRoot([
       {path:'', component:HomeComponent},
-      {path:'admin', component:AdminPageComponent}
+      {path:'admin', component:AdminPageComponent},
+      {path:'about', component:AboutComponent}
     ]),
   BrowserAnimationsModule
   ],
