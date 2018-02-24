@@ -1,0 +1,29 @@
+<h1 class="text-center">IIIT Kota Students</h1>
+<br><br>
+<div style="display: flex">
+<div class="container" style="flex: 1.5">
+  
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#cse">Computer And Science Engg.</button>
+    <div id="cse" class="collapse">
+      <ul>
+        <li *ngFor="let x of res">{{x.name}}</li>
+      </ul>
+    </div>
+</div>
+<div class="container" style="flex: 1.5">
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#ece">Electronics And Communication Engg.</button>
+    <div id="ece" class="collapse">
+        <ul>
+            <li *ngFor="let x of res">{{x.name}}</li>
+          </ul>
+    </div>
+</div>
+<div class="container" style="flex: 1"> 
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#alm">Alumni</button>
+    <div id="alm" class="collapse">
+        <ul>
+            <li *ngFor="let x of res">{{x.name}}</li>
+          </ul>
+    </div>
+</div>    
+</div>

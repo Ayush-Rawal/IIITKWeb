@@ -16,6 +16,7 @@ import { QuickContactUsComponent } from './quick-contact-us/quick-contact-us.com
 import { PaginatedDisplayComponent } from './paginated-display/paginated-display.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { StudentsComponent } from './students/students.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AboutComponent } from './about/about.component';
     PaginatedDisplayComponent,
     HomeComponent,
     AboutComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { AboutComponent } from './about/about.component';
       {path:'', component:HomeComponent},
       {path:'admin', component:AdminPageComponent},
       {path:'about', component:AboutComponent},
-      {path:'contact-us',component:ContactUsComponent}
+      {path:'contact-us',component:ContactUsComponent},
+      {path:'students',component:StudentsComponent}
     ]),
   BrowserAnimationsModule
   ],

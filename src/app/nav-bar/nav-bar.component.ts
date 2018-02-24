@@ -63,7 +63,7 @@ export class NavBarComponent {
         ]
       }, {
         "name": "Contact",
-        "link": "/contact",
+        "link": "/contact-us",
         "sublinks": [
           {
             "name": "Contact",
