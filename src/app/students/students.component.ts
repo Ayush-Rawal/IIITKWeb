@@ -6,17 +6,12 @@ import {Http} from '@angular/http';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-res:string[];
-  constructor(private http:Http) {
-
-    http.get("http://jsonplaceholder.typicode.com/users").subscribe(
-     responese=>
-     {
-      this.res=responese.json();
-     } 
-    );
+  res:any[];
+  constructor(http:Http) {
+    http.get("http://jsonplaceholder.typicode.com/photos").subscribe(response=>{
+      this.res=response.json();
+    }); //end point for displaying the students pdf link
    }
-
   ngOnInit() {
   }
 

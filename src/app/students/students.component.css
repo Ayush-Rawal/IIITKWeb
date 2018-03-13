@@ -1,13 +1,17 @@
-h1{
-    font-size: 5.0em;
-    color: crimson;
+th
+{
+font-size: 1.6em;
+text-align: center;
 }
-li{
-    font-size: 1.5em;
-    align-content: center;
-
+tr{    
+font-size: 1.2em;
 }
-li:hover{
-    font-size: 2.0em;
-    color: crimson;
+.td-hover:hover
+{
+font-size: 1.6em;
+}
+td
+{
+text-align: center;
+font-size: 1.2em;
 }

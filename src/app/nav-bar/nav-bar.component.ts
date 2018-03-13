@@ -28,8 +28,8 @@ export class NavBarComponent {
             "link": "/faculty/non-teaching-staff"
           },
           {
-            "name": "Link 1",
-            "link": "/"
+            "name": "Students",
+            "link": "/students"
           }
         ]
       },
