@@ -1,7 +1,5 @@
 div[role=container] {
     display: flex;
-    height: 75vw;
-    max-height: 100vw;
     flex-flow: column nowrap;
     margin: 1rem 0;
 }
@@ -13,12 +11,6 @@ div[data-part] {
     justify-content: center;
     align-items: center;
 }
-
-div[data-part=about] {}
-
-div[data-part=vision] {}
-
-div[data-part=mission] {}
 
 .title {
     flex: 3;
