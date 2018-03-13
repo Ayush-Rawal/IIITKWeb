@@ -12,20 +12,20 @@ export class NavBarComponent {
   content = {
     "links": [
       {
-        "name": "Link 1",
-        "link": "/",
+        "name": "Faculty",
+        "link": "/faculty",
         "sublinks": [
           {
-            "name": "Link 1",
-            "link": "/"
+            "name": "Permanent Faculty",
+            "link": "/faculty/permanent"
           },
           {
-            "name": "Link 1",
-            "link": "/"
+            "name": "Guest Faculty",
+            "link": "/faculty/guest"
           },
           {
-            "name": "Link 1",
-            "link": "/"
+            "name": "Non-Teaching-Staff",
+            "link": "/faculty/non-teaching-staff"
           },
           {
             "name": "Link 1",

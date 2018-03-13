@@ -1,0 +1,17 @@
+<div class="container table-responsive-md"> 
+    <table class="table table-bordered table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th>Staff Name</th>
+          <th>Contact Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tr-hover" *ngFor="let x of res">
+        <td>{{x.username}}</td>
+        <td>{{x.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

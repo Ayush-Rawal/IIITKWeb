@@ -17,6 +17,9 @@ import { PaginatedDisplayComponent } from './paginated-display/paginated-display
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { StudentsComponent } from './students/students.component';
+import { PermanentFacultyComponent } from './permanent-faculty/permanent-faculty.component';
+import { GuestFacultyComponent } from './guest-faculty/guest-faculty.component';
+import { NonTeachingStaffComponent } from './non-teaching-staff/non-teaching-staff.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { StudentsComponent } from './students/students.component';
     HomeComponent,
     AboutComponent,
     ContactUsComponent,
-    StudentsComponent
+    StudentsComponent,
+    PermanentFacultyComponent,
+    GuestFacultyComponent,
+    NonTeachingStaffComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,10 @@ import { StudentsComponent } from './students/students.component';
       {path:'admin', component:AdminPageComponent},
       {path:'about', component:AboutComponent},
       {path:'contact-us',component:ContactUsComponent},
-      {path:'students',component:StudentsComponent}
+      {path:'students',component:StudentsComponent},
+      {path:'faculty/permanent',component:PermanentFacultyComponent},
+      {path:'faculty/guest',component:GuestFacultyComponent},
+      {path:'faculty/non-teaching-staff',component:NonTeachingStaffComponent}
     ]),
   BrowserAnimationsModule
   ],
