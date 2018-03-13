@@ -20,6 +20,7 @@ import { StudentsComponent } from './students/students.component';
 import { PermanentFacultyComponent } from './permanent-faculty/permanent-faculty.component';
 import { GuestFacultyComponent } from './guest-faculty/guest-faculty.component';
 import { NonTeachingStaffComponent } from './non-teaching-staff/non-teaching-staff.component';
+import { PlacementsComponent } from './placements/placements.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NonTeachingStaffComponent } from './non-teaching-staff/non-teaching-sta
     StudentsComponent,
     PermanentFacultyComponent,
     GuestFacultyComponent,
-    NonTeachingStaffComponent
+    NonTeachingStaffComponent,
+    PlacementsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { NonTeachingStaffComponent } from './non-teaching-staff/non-teaching-sta
       {path:'students',component:StudentsComponent},
       {path:'faculty/permanent',component:PermanentFacultyComponent},
       {path:'faculty/guest',component:GuestFacultyComponent},
-      {path:'faculty/non-teaching-staff',component:NonTeachingStaffComponent}
+      {path:'faculty/non-teaching-staff',component:NonTeachingStaffComponent},
+      {path:'students/placement',component:PlacementsComponent}
     ]),
   BrowserAnimationsModule
   ],
