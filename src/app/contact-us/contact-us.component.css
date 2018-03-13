@@ -3,3 +3,34 @@ pre{
     font-family:Open Sans;
     background-color:rgba(240, 248, 255, 0.4);
 }
+
+div.card-body {
+    display: flex;
+    flex-flow: column wrap; 
+}
+
+div.card-body:not(:first-child){
+    border-top: 0.025px dashed black;
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+div.card-body span, div.card-body div {
+    flex:1;
+}
+div.card-body div {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0.5rem 0;
+}
+div.card-body div span{
+    flex: 1;
+    margin: 0.3em 0;
+}
+span.route{
+    font-size: 1.2em;
+    margin: 0.1em;
+    font-weight: 500;
+}
