@@ -3,13 +3,18 @@ h2 {
 }
 
 div.card {
-    margin: 4em;
+    /* margin: 3em; */
+    margin: 1.77em 10%;
 }
 
 h1 {
     text-align: center;
-    margin: 1em;
     font-size: 4.5em;
-    line-height: 2.25em;
+    line-height: 4.5em;
     font-weight: 600;
+}
+div[container] {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1.5em 1em;
 }

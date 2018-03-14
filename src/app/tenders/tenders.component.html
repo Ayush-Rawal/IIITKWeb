@@ -1,12 +1,15 @@
-<h1>Tenders</h1>
+<div container>
 
-<div class="card text-center" *ngFor="let tender of content" >
-  <div class="card-header">
-    <h2>Tender</h2>
-  </div>
-  <div class="card-body">
-    <h4 class="card-title">{{tender.title}}</h4>
-    <p class="card-text">{{tender.content}}</p>
-    <a href={{tender.link}} class="btn btn-primary btn-lg">View Tender</a>
+  <h1>Tenders</h1>
+
+  <div class="card text-center" *ngFor="let tender of content" >
+   <div class="card-header">
+      <h2>Tender</h2>
+   </div>
+    <div class="card-body">
+      <h4 class="card-title">{{tender.title}}</h4>
+      <p class="card-text">{{tender.content}}</p>
+      <a href={{tender.link}} class="btn btn-primary btn-lg">View Tender</a>
+    </div>
   </div>
 </div>
