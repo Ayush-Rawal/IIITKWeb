@@ -21,9 +21,10 @@ import { PermanentFacultyComponent } from './permanent-faculty/permanent-faculty
 import { GuestFacultyComponent } from './guest-faculty/guest-faculty.component';
 import { NonTeachingStaffComponent } from './non-teaching-staff/non-teaching-staff.component';
 import { PlacementsComponent } from './placements/placements.component';
-import { VacanciesComponent } from './vacancies/vacancies.component';
+// import { VacanciesComponent } from './vacancies/vacancies.component';
 import { TendersComponent } from './tenders/tenders.component';
 import { ExecutiveCouncilComponent } from './executive-council/executive-council.component';
+import { GoverningBodyComponent } from './governing-body/governing-body.component';
 
 @NgModule({
   declarations: [
@@ -43,9 +44,10 @@ import { ExecutiveCouncilComponent } from './executive-council/executive-council
     GuestFacultyComponent,
     NonTeachingStaffComponent,
     PlacementsComponent,
-    VacanciesComponent,
+    // VacanciesComponent,
     TendersComponent,
-    ExecutiveCouncilComponent
+    ExecutiveCouncilComponent,
+    GoverningBodyComponent
   ],
   imports: [
     BrowserModule,
@@ -61,9 +63,10 @@ import { ExecutiveCouncilComponent } from './executive-council/executive-council
       {path: 'faculty/guest', component: GuestFacultyComponent},
       {path: 'faculty/non-teaching-staff', component: NonTeachingStaffComponent},
       {path: 'students/placement', component: PlacementsComponent},
-      {path: 'vacancies', component: VacanciesComponent},
+      // {path: 'vacancies', component: VacanciesComponent},
       {path: 'tenders', component: TendersComponent},
-      {path: 'executive-council', component: ExecutiveCouncilComponent}
+      {path: 'institute/executive-council', component: ExecutiveCouncilComponent},
+      {path: 'institute/governing-body', component: GoverningBodyComponent}
     ]),
   BrowserAnimationsModule
   ],

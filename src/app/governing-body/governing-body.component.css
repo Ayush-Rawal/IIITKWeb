@@ -1,0 +1,22 @@
+th
+{
+font-size: 1.6em;
+text-align: center;
+}
+tr{    
+font-size: 1.2em;
+}
+/* .tr-hover:hover
+{
+font-size: 1.6em;
+} */
+td
+{
+text-align: center;
+font-size: 1.2em;
+}
+p
+{
+    font-size: 3em;
+    color: darkslateblue;
+}
