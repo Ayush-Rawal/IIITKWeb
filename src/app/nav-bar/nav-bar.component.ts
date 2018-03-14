@@ -26,10 +26,6 @@ export class NavBarComponent {
           {
             "name": "Non-Teaching-Staff",
             "link": "/faculty/non-teaching-staff"
-          },
-          {
-            "name": "Students",
-            "link": "/students"
           }
         ]
       },
@@ -79,6 +75,18 @@ export class NavBarComponent {
             "link": "/contact"
           }
         ]
+      }, {
+          "name": "Students",
+          "link": "/students",
+          "sublinks": []
+      }, {
+        "name": "Vacancies",
+        "link": "/vacancies",
+        "sublinks": []
+      }, {
+        "name": "Tenders",
+        "link": "/tenders",
+        "sublinks": [] 
       }
     ]
   }

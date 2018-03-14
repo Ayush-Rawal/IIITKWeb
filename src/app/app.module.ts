@@ -21,6 +21,8 @@ import { PermanentFacultyComponent } from './permanent-faculty/permanent-faculty
 import { GuestFacultyComponent } from './guest-faculty/guest-faculty.component';
 import { NonTeachingStaffComponent } from './non-teaching-staff/non-teaching-staff.component';
 import { PlacementsComponent } from './placements/placements.component';
+import { VacanciesComponent } from './vacancies/vacancies.component';
+import { TendersComponent } from './tenders/tenders.component';
 
 @NgModule({
   declarations: [
@@ -39,22 +41,26 @@ import { PlacementsComponent } from './placements/placements.component';
     PermanentFacultyComponent,
     GuestFacultyComponent,
     NonTeachingStaffComponent,
-    PlacementsComponent
+    PlacementsComponent,
+    VacanciesComponent,
+    TendersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      {path:'', component:HomeComponent},
-      {path:'admin', component:AdminPageComponent},
-      {path:'about', component:AboutComponent},
-      {path:'contact-us',component:ContactUsComponent},
-      {path:'students',component:StudentsComponent},
-      {path:'faculty/permanent',component:PermanentFacultyComponent},
-      {path:'faculty/guest',component:GuestFacultyComponent},
-      {path:'faculty/non-teaching-staff',component:NonTeachingStaffComponent},
-      {path:'students/placement',component:PlacementsComponent}
+      {path: '', component: HomeComponent},
+      {path: 'admin', component: AdminPageComponent},
+      {path: 'about', component: AboutComponent},
+      {path: 'contact-us', component: ContactUsComponent},
+      {path: 'students', component: StudentsComponent},
+      {path: 'faculty/permanent', component: PermanentFacultyComponent},
+      {path: 'faculty/guest', component: GuestFacultyComponent},
+      {path: 'faculty/non-teaching-staff', component: NonTeachingStaffComponent},
+      {path: 'students/placement', component: PlacementsComponent},
+      {path: 'vacancies', component: VacanciesComponent},
+      {path: 'tenders', component: TendersComponent}
     ]),
   BrowserAnimationsModule
   ],
