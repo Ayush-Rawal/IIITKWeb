@@ -25,6 +25,9 @@ import { PlacementsComponent } from './placements/placements.component';
 import { TendersComponent } from './tenders/tenders.component';
 import { ExecutiveCouncilComponent } from './executive-council/executive-council.component';
 import { GoverningBodyComponent } from './governing-body/governing-body.component';
+import { SenateComponent } from './senate/senate.component';
+import { DirectorComponent } from './director/director.component';
+import { CoordinatorComponent } from './coordinator/coordinator.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { GoverningBodyComponent } from './governing-body/governing-body.componen
     // VacanciesComponent,
     TendersComponent,
     ExecutiveCouncilComponent,
-    GoverningBodyComponent
+    GoverningBodyComponent,
+    SenateComponent,
+    DirectorComponent,
+    CoordinatorComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +72,11 @@ import { GoverningBodyComponent } from './governing-body/governing-body.componen
       // {path: 'vacancies', component: VacanciesComponent},
       {path: 'tenders', component: TendersComponent},
       {path: 'institute/executive-council', component: ExecutiveCouncilComponent},
-      {path: 'institute/governing-body', component: GoverningBodyComponent}
+      {path: 'institute/governing-body', component: GoverningBodyComponent},
+      {path: 'executive-council', component: ExecutiveCouncilComponent},
+      {path: 'senate', component: SenateComponent},
+      {path: 'director', component: DirectorComponent},
+      {path: 'coordinator', component: CoordinatorComponent}
     ]),
   BrowserAnimationsModule
   ],

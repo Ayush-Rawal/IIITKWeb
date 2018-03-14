@@ -1,0 +1,7 @@
+div[role] {
+    margin: 2em 0;
+}
+
+div[role=director] {
+    font-size: larger;
+}

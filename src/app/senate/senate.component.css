@@ -10,6 +10,9 @@ table {
 
 div[role=minutes] {
     margin: 3em 0em 1em 0em;
-    height: auto;
     flex: 4;
+}
+
+table th {
+    font-size: 1.17em;
 }

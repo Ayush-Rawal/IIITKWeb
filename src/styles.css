@@ -3,3 +3,11 @@
 nav{
     z-index: 1;
 }
+
+div[container] {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1.5em 1em;
+    margin: 1.17em 10%;
+    align-content: justify;
+}

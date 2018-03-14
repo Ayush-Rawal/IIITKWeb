@@ -1,0 +1,16 @@
+div[role] {
+    margin: 2em 0;
+}
+
+div[role=coordinator] {
+    font-size: larger;
+}
+
+div[role=former-coordinator] {
+    margin: 1em;
+    font-size: 1.05em;
+}
+
+div[role=former-coordinator]:not(:last-child) {
+    border-bottom: 0.25px dashed black;
+}
