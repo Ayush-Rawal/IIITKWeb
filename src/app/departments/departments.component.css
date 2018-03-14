@@ -1,0 +1,16 @@
+p.lead {
+    color: #007BFF;
+    margin: 2em 0;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+div[container] {
+    flex-flow: column nowrap;
+}

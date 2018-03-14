@@ -29,6 +29,7 @@ import { SenateComponent } from './senate/senate.component';
 import { DirectorComponent } from './director/director.component';
 import { CoordinatorComponent } from './coordinator/coordinator.component';
 import { IndustryPartnersComponent } from './industry-partners/industry-partners.component';
+import { DepartmentsComponent } from './departments/departments.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { IndustryPartnersComponent } from './industry-partners/industry-partners
     SenateComponent,
     DirectorComponent,
     CoordinatorComponent,
-    IndustryPartnersComponent
+    IndustryPartnersComponent,
+    DepartmentsComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,8 @@ import { IndustryPartnersComponent } from './industry-partners/industry-partners
       {path: 'institute/senate', component: SenateComponent},
       {path: 'institute/director', component: DirectorComponent},
       {path: 'institute/coordinator', component: CoordinatorComponent},
-      {path: 'institute/industry-partners', component: IndustryPartnersComponent}
+      {path: 'institute/industry-partners', component: IndustryPartnersComponent},
+      {path: 'academics/departments', component: DepartmentsComponent}
     ]),
   BrowserAnimationsModule
   ],
