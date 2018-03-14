@@ -16,7 +16,7 @@ div[data-part] {
     flex: 3;
     border-bottom: 0.25px solid white;
     font-size: 5em;
-    line-height: 3.5em;
+    line-height: 2.5em;
     color: white;
 }
 
@@ -26,5 +26,10 @@ div[data-part] {
     line-height: 1.75em;
     font-weight: 400;
     text-align: center;
-    margin: 0.75em;
+    padding: 2em 0;
+    margin: 0.75em 3em;
+}
+
+div[data-part]:not(:last-child)>div.content {
+    border-bottom: 0.25px solid #008cba;
 }
