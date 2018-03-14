@@ -1,4 +1,4 @@
-const webapp=require('../webapp');
+const webapp=require('../../server');
 const global_controller=require('./global_controller');
 module.exports=(webapp)=>{
     webapp.get('/json/global',global_controller.showinfo);
