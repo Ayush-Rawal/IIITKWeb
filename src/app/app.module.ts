@@ -1,3 +1,5 @@
+import { TimetableComponent } from './timetable/timetable.component';
+import { CurriculumComponent } from './curriculum/curriculum.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutBarComponent } from './about-bar/about-bar.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -30,6 +32,9 @@ import { DirectorComponent } from './director/director.component';
 import { CoordinatorComponent } from './coordinator/coordinator.component';
 import { IndustryPartnersComponent } from './industry-partners/industry-partners.component';
 import { DepartmentsComponent } from './departments/departments.component';
+import { ScholarshipsComponent } from './scholarships/scholarships.component';
+import { LibraryComponent } from './library/library.component';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +62,11 @@ import { DepartmentsComponent } from './departments/departments.component';
     DirectorComponent,
     CoordinatorComponent,
     IndustryPartnersComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    ScholarshipsComponent,
+    TimetableComponent,
+    CurriculumComponent,
+    LibraryComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +90,11 @@ import { DepartmentsComponent } from './departments/departments.component';
       {path: 'institute/director', component: DirectorComponent},
       {path: 'institute/coordinator', component: CoordinatorComponent},
       {path: 'institute/industry-partners', component: IndustryPartnersComponent},
-      {path: 'academics/departments', component: DepartmentsComponent}
+      {path: 'academics/departments', component: DepartmentsComponent},
+      {path: 'academics/timetable', component: TimetableComponent},
+      {path: 'academics/curriculum', component: CurriculumComponent},
+      {path: 'academics/scholarships', component: ScholarshipsComponent},
+      {path: 'academics/library', component: LibraryComponent}
     ]),
   BrowserAnimationsModule
   ],

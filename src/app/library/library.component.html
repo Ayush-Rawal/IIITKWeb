@@ -1,12 +1,11 @@
 
-<div container *ngFor="let x of content.departments" >
+<div class="container" *ngFor="let x of content.library">
     <h1>{{x.name}}</h1>
     <div class="card">
   
       <div class="card-body" >
-        <span>{{x.start}}</span>
         <span>{{x.info}}</span>
+        <span>{{x.links}}</span>
       </div>
-  
-    </div>
-</div>
+  </div>
+  </div>
