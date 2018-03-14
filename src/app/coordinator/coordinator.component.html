@@ -13,9 +13,11 @@
     </div>
 
     <h3>Previous Coordinators</h3>
-    <div role="former-coordinator" *ngFor="let coordinator of content.prevCoordinator">
-      <p>{{coordinator.name}}</p>
-      <p>Tenure: {{coordinator.tenure}}</p>
+    <div role="former-coordinator" *ngFor="let coordinator of content.prevCoordinator" class="container table-responsive-md"> 
+      <table class="table table-bordered table-hover">
+      <tr>{{coordinator.name}}</tr>
+      <tr>Tenure: {{coordinator.tenure}}</tr>
+    </table>
     </div>
   </div>
   

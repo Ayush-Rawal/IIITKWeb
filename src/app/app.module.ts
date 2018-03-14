@@ -28,6 +28,7 @@ import { GoverningBodyComponent } from './governing-body/governing-body.componen
 import { SenateComponent } from './senate/senate.component';
 import { DirectorComponent } from './director/director.component';
 import { CoordinatorComponent } from './coordinator/coordinator.component';
+import { IndustryPartnersComponent } from './industry-partners/industry-partners.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CoordinatorComponent } from './coordinator/coordinator.component';
     GoverningBodyComponent,
     SenateComponent,
     DirectorComponent,
-    CoordinatorComponent
+    CoordinatorComponent,
+    IndustryPartnersComponent
   ],
   imports: [
     BrowserModule,
@@ -73,10 +75,10 @@ import { CoordinatorComponent } from './coordinator/coordinator.component';
       {path: 'tenders', component: TendersComponent},
       {path: 'institute/executive-council', component: ExecutiveCouncilComponent},
       {path: 'institute/governing-body', component: GoverningBodyComponent},
-      {path: 'executive-council', component: ExecutiveCouncilComponent},
-      {path: 'senate', component: SenateComponent},
-      {path: 'director', component: DirectorComponent},
-      {path: 'coordinator', component: CoordinatorComponent}
+      {path: 'institute/senate', component: SenateComponent},
+      {path: 'institute/director', component: DirectorComponent},
+      {path: 'institute/coordinator', component: CoordinatorComponent},
+      {path: 'institute/industry-partners', component: IndustryPartnersComponent}
     ]),
   BrowserAnimationsModule
   ],
