@@ -1,0 +1,11 @@
+<div container>
+
+  <div role="department" *ngFor="let department of content.departments">
+      <div class="jumbotron bg-info">
+        <h1 class="display-3 " >{{department.name}}</h1>
+        <p class="lead ">{{department.start}}</p>
+        <p class="text-muted">{{department.info}}</p>
+      </div>
+  </div>
+
+</div>
