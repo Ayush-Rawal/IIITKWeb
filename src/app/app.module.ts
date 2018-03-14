@@ -26,6 +26,7 @@ import { TendersComponent } from './tenders/tenders.component';
 import { ExecutiveCouncilComponent } from './executive-council/executive-council.component';
 import { SenateComponent } from './senate/senate.component';
 import { DirectorComponent } from './director/director.component';
+import { CoordinatorComponent } from './coordinator/coordinator.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { DirectorComponent } from './director/director.component';
     TendersComponent,
     ExecutiveCouncilComponent,
     SenateComponent,
-    DirectorComponent
+    DirectorComponent,
+    CoordinatorComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ import { DirectorComponent } from './director/director.component';
       {path: 'tenders', component: TendersComponent},
       {path: 'executive-council', component: ExecutiveCouncilComponent},
       {path: 'senate', component: SenateComponent},
-      {path: 'director', component: DirectorComponent}
+      {path: 'director', component: DirectorComponent},
+      {path: 'coordinator', component: CoordinatorComponent}
     ]),
   BrowserAnimationsModule
   ],

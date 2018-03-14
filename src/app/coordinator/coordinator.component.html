@@ -1,0 +1,21 @@
+<div container>
+    <h1 class="text-center">Coordinator, IIIT Kota</h1>
+  
+    <div role="coordinator">
+      <img src="../../assets/coordinator.jpeg" alt="Coordinator, IIIT Kota" class="img-thumbnail float-right" width="20%" height="20%"/>
+      <p>{{content.coordinator.name}}</p>
+      <p>Office: {{content.coordinator.office}}</p>
+      <p>Education: {{content.coordinator.education}}</p>
+      <p>Phone: {{content.coordinator.phone}}</p>
+      <p><a href="mailto:{{content.coordinator.email}}">Email: {{content.coordinator.email}}</a></p>
+      <p>Website: <a href={{content.coordinator.website}}>{{content.coordinator.website}}</a></p>
+      <p>Tenure: {{content.coordinator.tenure}}</p>
+    </div>
+
+    <h3>Previous Coordinators</h3>
+    <div role="former-coordinator" *ngFor="let coordinator of content.prevCoordinator">
+      <p>{{coordinator.name}}</p>
+      <p>Tenure: {{coordinator.tenure}}</p>
+    </div>
+  </div>
+  
