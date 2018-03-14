@@ -1,7 +1,5 @@
-const express = require('express')
+const webapp=require('./server/webapp');
 
-const app = express()
-
-app.use(express.static(__dirname + '/dist'))
-
-app.listen(process.env.port || 8080)
+webapp.listen(process.env.PORT || 8080, ()=>{
+    console.log(`Server running on ${process.env.PORT || 8080}`);
+});
