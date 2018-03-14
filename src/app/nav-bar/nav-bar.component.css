@@ -1,5 +1,6 @@
-/*Strip the ul of padding and list styling*/
-
+* {
+    cursor: default;
+}
 nav {
     z-index: 1;
 }
@@ -26,9 +27,6 @@ li {
     flex: 1 120px;
 }
 
-
-/*Style for menu links*/
-
 li a {
     display: block;
     min-width: 140px;
@@ -42,16 +40,10 @@ li a {
     text-decoration: none;
 }
 
-
-/*Hover state for top level links*/
-
 li:hover a {
     background: #008cba;
     color: #fff;
 }
-
-
-/*Style for dropdown links*/
 
 li:hover ul a {
     background: #f3f3f3;
@@ -62,27 +54,19 @@ li:hover ul a {
     width: inherit;
 }
 
-
-/*Hover state for dropdown links*/
-
 li:hover ul a:hover {
     background: #084386;
     color: #fff;
 }
-
-
-/*Hide dropdown links until they are needed*/
 
 li ul {
     display: none;
     align-items: flex-start;
     width: inherit;
     position: absolute;
-    min-width: 21em;
+    min-width: 15em;
 }
 
-
-/*Make dropdown links vertical*/
 
 li ul div {
     display: block;
@@ -96,8 +80,6 @@ div[role="sublink-container"] {
 }
 
 
-/*Prevent text wrapping*/
-
 li ul div a {
     width: inherit;
     min-width: 100px;
@@ -105,15 +87,11 @@ li ul div a {
 }
 
 
-/*Display the dropdown on hover*/
-
 ul li a:hover+.hidden,
 .hidden:hover {
     display: block;
 }
 
-
-/*Style 'show menu' label button and hide it by default*/
 
 .show-menu {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -126,38 +104,28 @@ ul li a:hover+.hidden,
 }
 
 
-/*Hide checkbox*/
-
 input[type=checkbox] {
     display: none;
 }
 
-
-/*Show menu when invisible checkbox is checked*/
 
 input[type=checkbox]:checked~#menu {
     display: block;
 }
 
 
-/*Responsive Styles*/
-
 @media screen and (max-width: 760px) {
-    /*Make dropdown links appear inline*/
     ul {
         position: static;
         display: none;
     }
-    /*Create vertical spacing*/
     li {
         margin-bottom: 1px;
     }
-    /*Make all menu links full width*/
     ul li,
     li a {
         width: 100%;
     }
-    /*Display 'show menu' link*/
     .show-menu {
         display: block;
     }

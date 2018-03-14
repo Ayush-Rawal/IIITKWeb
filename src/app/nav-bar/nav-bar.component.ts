@@ -28,53 +28,6 @@ export class NavBarComponent {
             "link": "/faculty/non-teaching-staff"
           }
         ]
-      },
-      {
-        "name": "Admin",
-        "link": "/admin",
-        "sublinks": [
-          {
-            "name": "Admin",
-            "link": "/admin"
-          }, {
-            "name": "Admin",
-            "link": "/admin"
-          }
-        ]
-      },
-      {
-        "name": "About us",
-        "link": "/about",
-        "sublinks": [
-          {
-            "name": "About",
-            "link": "/about"
-          }, {
-            "name": "About",
-            "link": "/about"
-          }, {
-            "name": "About",
-            "link": "/about"
-          }
-        ]
-      }, {
-        "name": "Contact",
-        "link": "/contact-us",
-        "sublinks": [
-          {
-            "name": "Contact",
-            "link": "/contact"
-          }, {
-            "name": "Contact",
-            "link": "/contact"
-          }, {
-            "name": "Contact",
-            "link": "/contact"
-          }, {
-            "name": "Contact",
-            "link": "/contact"
-          }
-        ]
       }, {
           "name": "Students",
           "link": "/students",
@@ -86,7 +39,15 @@ export class NavBarComponent {
       }, {
         "name": "Tenders",
         "link": "/tenders",
-        "sublinks": [] 
+        "sublinks": []
+      }, {
+        "name": "About us",
+        "link": "/about",
+        "sublinks": []
+      }, {
+        "name": "Contact",
+        "link": "/contact-us",
+        "sublinks": []
       }
     ]
   }
