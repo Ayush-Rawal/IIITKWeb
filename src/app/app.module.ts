@@ -23,6 +23,7 @@ import { NonTeachingStaffComponent } from './non-teaching-staff/non-teaching-sta
 import { PlacementsComponent } from './placements/placements.component';
 import { VacanciesComponent } from './vacancies/vacancies.component';
 import { TendersComponent } from './tenders/tenders.component';
+import { ExecutiveCouncilComponent } from './executive-council/executive-council.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { TendersComponent } from './tenders/tenders.component';
     NonTeachingStaffComponent,
     PlacementsComponent,
     VacanciesComponent,
-    TendersComponent
+    TendersComponent,
+    ExecutiveCouncilComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { TendersComponent } from './tenders/tenders.component';
       {path: 'faculty/non-teaching-staff', component: NonTeachingStaffComponent},
       {path: 'students/placement', component: PlacementsComponent},
       {path: 'vacancies', component: VacanciesComponent},
-      {path: 'tenders', component: TendersComponent}
+      {path: 'tenders', component: TendersComponent},
+      {path: 'executive-council', component: ExecutiveCouncilComponent}
     ]),
   BrowserAnimationsModule
   ],
