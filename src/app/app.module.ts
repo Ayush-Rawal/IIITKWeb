@@ -34,6 +34,7 @@ import { IndustryPartnersComponent } from './industry-partners/industry-partners
 import { DepartmentsComponent } from './departments/departments.component';
 import { ScholarshipsComponent } from './scholarships/scholarships.component';
 import { LibraryComponent } from './library/library.component';
+import { InstituteEventsComponent } from './institute-events/institute-events.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { LibraryComponent } from './library/library.component';
     ScholarshipsComponent,
     TimetableComponent,
     CurriculumComponent,
-    LibraryComponent
+    LibraryComponent,
+    InstituteEventsComponent
   ],
   imports: [
     BrowserModule,
@@ -94,7 +96,8 @@ import { LibraryComponent } from './library/library.component';
       {path: 'academics/timetable', component: TimetableComponent},
       {path: 'academics/curriculum', component: CurriculumComponent},
       {path: 'academics/scholarships', component: ScholarshipsComponent},
-      {path: 'academics/library', component: LibraryComponent}
+      {path: 'academics/library', component: LibraryComponent},
+      {path: 'academics/institute-events', component: InstituteEventsComponent}
     ]),
   BrowserAnimationsModule
   ],
