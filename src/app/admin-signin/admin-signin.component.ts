@@ -11,9 +11,9 @@ export class AdminSigninComponent implements OnInit {
 
   ngOnInit() {
   }
-  submit(x,y)
+  submit(f)
   {
-    console.log(x,y);
+    console.log(f);
   }
 
 }

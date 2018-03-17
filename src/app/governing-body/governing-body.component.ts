@@ -65,5 +65,5 @@ export class GoverningBodyComponent implements OnInit {
       }
     ]
   }
-
+ngOnInit(){}
 }
