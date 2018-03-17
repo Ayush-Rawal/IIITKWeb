@@ -35,6 +35,7 @@ import { DepartmentsComponent } from './departments/departments.component';
 import { ScholarshipsComponent } from './scholarships/scholarships.component';
 import { LibraryComponent } from './library/library.component';
 import { InstituteEventsComponent } from './institute-events/institute-events.component';
+import { AdmissionsComponent } from './admissions/admissions.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { InstituteEventsComponent } from './institute-events/institute-events.co
     TimetableComponent,
     CurriculumComponent,
     LibraryComponent,
-    InstituteEventsComponent
+    InstituteEventsComponent,
+    AdmissionsComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +99,8 @@ import { InstituteEventsComponent } from './institute-events/institute-events.co
       {path: 'academics/curriculum', component: CurriculumComponent},
       {path: 'academics/scholarships', component: ScholarshipsComponent},
       {path: 'academics/library', component: LibraryComponent},
-      {path: 'academics/institute-events', component: InstituteEventsComponent}
+      {path: 'academics/institute-events', component: InstituteEventsComponent},
+      {path: 'academics/admissions', component: AdmissionsComponent}
     ]),
   BrowserAnimationsModule
   ],
