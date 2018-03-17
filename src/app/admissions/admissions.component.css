@@ -34,3 +34,12 @@ span.route{
     margin: 0.1em;
     font-weight: 500;
 }
+
+#main {
+    font-size: 1.27em;
+    line-height: 200%;
+}
+
+ol {
+    list-style-type: none;
+}
