@@ -71,7 +71,7 @@ li ul {
 li ul div {
     display: block;
     float: none;
-    flex: 1 200px;
+    flex: 1;
 }
 
 div[role="sublink-container"] {
@@ -82,8 +82,9 @@ div[role="sublink-container"] {
 
 li ul div a {
     width: inherit;
-    min-width: 100px;
+    min-width: 30rem;
     padding: 0 20px;
+    font-size: 1.7em;
 }
 
 

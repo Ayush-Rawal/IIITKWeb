@@ -12,12 +12,60 @@ export class NavBarComponent {
   content = {
     "links": [
       {
+        name: "Institute",
+        link: "institute",
+        sublinks: [
+          {
+            name: "Executive Council",
+            link: "/institute/executive-council"
+          }, {
+            name: "Governing Body",
+            link: "/institute/governing-body"
+          }, {
+            name: "Senate",
+            link: "/institute/senate"
+          }, {
+            name: "Director",
+            link: "/institute/director"
+          }, {
+            name: "Coordinator",
+            link: "/institute/coordinator"
+          }, {
+            name: "Industry Partners",
+            link: "/institute/industry-partners"
+          }
+        ]
+      }, {
+        name: "Academics",
+        link: "/academics",
+        sublinks: [
+          {
+            name: "Departments",
+            link: "/academics/departments"
+          }, {
+            name: "Time Table",
+            link: "/academics/timetable"
+          }, {
+            name: "Curriculum",
+            link: "/academics/curriculum"
+          }, {
+            name: "Scholarships",
+            link: "/academics/scholarships"
+          }, {
+            name: "Library",
+            link: "/academics/library"
+          }, {
+            name: "Events",
+            link: "/academics/institute-events"
+          }
+        ]
+      }, {
         "name": "Faculty",
         "link": "/faculty",
         "sublinks": [
           {
-            "name": "Permanent Faculty",
-            "link": "/faculty/permanent"
+            "name": "Contract Faculty",
+            "link": "/faculty/contract"
           },
           {
             "name": "Guest Faculty",
@@ -31,21 +79,17 @@ export class NavBarComponent {
       }, {
           "name": "Students",
           "link": "/students",
-          "sublinks": []
+          "sublinks": [
+            {
+              name: "Current Batches",
+              link: "/students/current-batches"
+            }, {
+              name: "Placements",
+              link: "/students/placements"
+            }
+          ]
       }, {
-        "name": "Vacancies",
-        "link": "/vacancies",
-        "sublinks": []
-      }, {
-        "name": "Tenders",
-        "link": "/tenders",
-        "sublinks": []
-      }, {
-        "name": "About us",
-        "link": "/about",
-        "sublinks": []
-      }, {
-        "name": "Contact",
+        "name": "Contact Us",
         "link": "/contact-us",
         "sublinks": []
       }
