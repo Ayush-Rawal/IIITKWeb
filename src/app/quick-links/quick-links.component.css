@@ -22,3 +22,13 @@ ul {
 ul>li {
     margin: 0.5rem 0;
 }
+.form-control
+{
+    width: 30vw;
+}
+label{
+    font-size: 2em;
+}
+pre{
+    font-size: 2em;
+}

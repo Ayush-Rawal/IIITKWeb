@@ -1,3 +1,13 @@
+
+<div>
+ 
+  <label for="typeahead-basic">Search the site:</label>
+  <input id="typeahead-basic" type="text" class="form-control" (keyup.Enter)="routing(model)" [(ngModel)]="model" [ngbTypeahead]="search"/>
+  <hr>
+  <!-- <pre>Model: {{ model | json }}</pre> -->
+</div>
+
+
 <div>
   <div class="quick-links-display">
     <p style="flex:1" class="quick-links-font" >Quick Links</p>
