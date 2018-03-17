@@ -1,3 +1,4 @@
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';//predefined BS components for Angular
 import { TimetableComponent } from './timetable/timetable.component';
 import { CurriculumComponent } from './curriculum/curriculum.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -10,7 +11,6 @@ import { RouterModule } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { ImagesSlideComponent } from './images-slide/images-slide.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
 import { QuickContactUsComponent } from './quick-contact-us/quick-contact-us.component';
@@ -37,13 +37,13 @@ import { InstituteEventsComponent } from './institute-events/institute-events.co
 import { AdmissionsComponent } from './admissions/admissions.component';
 import { FeesRegistrationComponent } from './fees-registration/fees-registration.component';
 import { AdminSigninComponent } from './admin-signin/admin-signin.component';
+import { ImagesSlideComponent } from './images-slide/images-slide.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutBarComponent,
-    ImagesSlideComponent,
     NavBarComponent,
     QuickLinksComponent,
     QuickContactUsComponent,
@@ -72,12 +72,14 @@ import { AdminSigninComponent } from './admin-signin/admin-signin.component';
     InstituteEventsComponent,
     AdmissionsComponent,
     FeesRegistrationComponent,
-    AdminSigninComponent
+    AdminSigninComponent,
+    ImagesSlideComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'admin', component: AdminSigninComponent},
