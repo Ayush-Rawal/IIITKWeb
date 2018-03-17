@@ -1,11 +1,21 @@
 
-<div class="container" *ngFor="let x of content.library">
-    <h1>{{x.name}}</h1>
+<div class="container">
+  <h1>Library</h1>
+  <p class="text-center text-primary">
+    Institute has a reference section of the best titles
+     relevant to various disciplines – CSE, ECE, Mathematics, Humanity and Social Sciences, etc.
+  </p>
+  <div *ngFor="let resource of content.library">
+    <h2>{{resource.name}}</h2>
     <div class="card">
   
       <div class="card-body" >
-        <span>{{x.info}}</span>
-        <span>{{x.links}}</span>
+        <span>{{resource.info}}</span>
+        <span class="link" *ngFor="let link of resource.links">
+           <a href="{{link.link}}">{{link.name}}</a> 
+          </span>
       </div>
+
+    </div>
   </div>
-  </div>
+</div>
