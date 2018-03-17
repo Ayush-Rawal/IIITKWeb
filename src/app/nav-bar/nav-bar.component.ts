@@ -33,6 +33,12 @@ export class NavBarComponent {
           }, {
             name: "Industry Partners",
             link: "/institute/industry-partners"
+          }, {
+            name: "Admissions",
+            link: "/institute/admissions"
+          }, {
+            name: "Fees and Registrations",
+            link: "/institute/fees-registration"
           }
         ]
       }, {
@@ -85,7 +91,7 @@ export class NavBarComponent {
               link: "/students/current-batches"
             }, {
               name: "Placements",
-              link: "/students/placements"
+              link: "/students/placement"
             }
           ]
       }, {

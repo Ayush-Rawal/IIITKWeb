@@ -102,8 +102,8 @@ import { FeesRegistrationComponent } from './fees-registration/fees-registration
       {path: 'academics/scholarships', component: ScholarshipsComponent},
       {path: 'academics/library', component: LibraryComponent},
       {path: 'academics/institute-events', component: InstituteEventsComponent},
-      {path: 'academics/admissions', component: AdmissionsComponent},
-      {path: 'academics/fees-registration', component: FeesRegistrationComponent}
+      {path: 'institute/admissions', component: AdmissionsComponent},
+      {path: 'institute/fees-registration', component: FeesRegistrationComponent}
     ]),
   BrowserAnimationsModule
   ],
