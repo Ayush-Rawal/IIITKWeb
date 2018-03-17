@@ -1,4 +1,23 @@
-th
+h1 {
+    text-align: center;
+    flex: 2;
+}
+
+table {
+    margin: 2em 0;
+    flex: 4;
+}
+
+div[role=minutes] {
+    margin: 3em 0em 1em 0em;
+    flex: 4;
+}
+
+table th {
+    font-size: 1.17em;
+}
+
+/* th
 {
 font-size: 1.6em;
 text-align: center;
@@ -10,7 +29,7 @@ font-size: 1.2em;
 {
 font-size: 1.6em;
 } */
-td
+/* td
 {
 text-align: center;
 font-size: 1.2em;
@@ -19,4 +38,4 @@ p
 {
     font-size: 3em;
     color: darkslateblue;
-}
+} */
