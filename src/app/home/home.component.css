@@ -12,3 +12,12 @@ paginated-display {
     margin: auto;
     padding: auto;
 }
+
+@media screen and (max-width: 480px) {
+    div[role=body] {
+        flex-flow: column wrap;
+    }
+    paginated-display {
+        max-width: 100%;
+    }
+}
