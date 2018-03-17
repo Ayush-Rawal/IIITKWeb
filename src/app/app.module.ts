@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { AdminPageComponent } from './admin-page/admin-page.component';
 import { ImagesSlideComponent } from './images-slide/images-slide.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
@@ -37,12 +36,12 @@ import { LibraryComponent } from './library/library.component';
 import { InstituteEventsComponent } from './institute-events/institute-events.component';
 import { AdmissionsComponent } from './admissions/admissions.component';
 import { FeesRegistrationComponent } from './fees-registration/fees-registration.component';
+import { AdminSigninComponent } from './admin-signin/admin-signin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminPageComponent,
     AboutBarComponent,
     ImagesSlideComponent,
     NavBarComponent,
@@ -72,7 +71,8 @@ import { FeesRegistrationComponent } from './fees-registration/fees-registration
     LibraryComponent,
     InstituteEventsComponent,
     AdmissionsComponent,
-    FeesRegistrationComponent
+    FeesRegistrationComponent,
+    AdminSigninComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +80,7 @@ import { FeesRegistrationComponent } from './fees-registration/fees-registration
     HttpModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
-      {path: 'admin', component: AdminPageComponent},
+      {path: 'admin', component: AdminSigninComponent},
       {path: 'about', component: AboutComponent},
       {path: 'contact-us', component: ContactUsComponent},
       {path: 'students/current-batches', component: StudentsComponent},
