@@ -1,15 +1,13 @@
-<div >
+<div>
   <div class="quick-links-display">
     <p style="flex:1" class="quick-links-font" >Quick Links</p>
   </div>
 
   <div class="quick-links-display">
     <ul>
-      <li *ngFor="let x of links" >
-        <a href="" class="quick-link-links">{{x.name}}</a>
+      <li *ngFor="let link of content" >
+        <a href="{{link.link}}" class="quick-link-links">{{link.name}}</a>
       </li>
     </ul>
-  </div>
-
-  
+  </div>  
 </div>
