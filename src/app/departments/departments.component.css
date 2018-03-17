@@ -6,7 +6,11 @@ pre{
 
 div.card-body {
     display: flex;
-    flex-flow: column wrap; 
+    flex-flow: column wrap;
+}
+
+div.card {
+    margin-left: 1em;
 }
 
 div.card-body:not(:first-child){
@@ -15,6 +19,7 @@ div.card-body:not(:first-child){
 
 h1 {
     margin: 1rem 0;
+    font-size: 2.54375rem;
 }
 
 div.card-body span, div.card-body div {
