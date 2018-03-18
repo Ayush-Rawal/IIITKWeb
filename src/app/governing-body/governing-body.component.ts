@@ -1,4 +1,3 @@
-import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'governing-body',
