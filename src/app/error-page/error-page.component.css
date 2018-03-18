@@ -2,17 +2,10 @@ h2 {
     font-size: 2.0em;
 }
 
-div.card {
-    /* margin: 3em; */
+div.card, img {
     margin: 1.77em 10%;
 }
 
-h1 {
-    text-align: center;
-    font-size: 4.5em;
-    line-height: 1.5em;
-    font-weight: 600;
-}
 div[container] {
     display: flex;
     flex-flow: column nowrap;
@@ -20,9 +13,4 @@ div[container] {
 }
 p{
     font-size: 1.5em;
-}
-.responsive {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
 }
