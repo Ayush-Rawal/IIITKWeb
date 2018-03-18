@@ -7,16 +7,17 @@ import { Router } from '@angular/router';
 
 const states = ['About-us','Contact-Us','Students','Placement','Fee Structure','Admissions','Library','Curriculum','Scholarships'];
 @Component({
-  selector: 'about-bar',
-  templateUrl: './about-bar.component.html',
-  styleUrls: ['./about-bar.component.css']
+  selector: 'about-search-bar',
+  templateUrl: './about-search-bar.component.html',
+  styleUrls: ['./about-search-bar.component.css']
 })
-export class AboutBarComponent{
+export class AboutSearchBarComponent{
  
   constructor(public router:Router) { }
 
     routing(model:string)
     { 
+      console.log(model);
       model=model.toLowerCase();
       if(model=="admin")
       this.router.navigate(['../admin']);
@@ -58,6 +59,7 @@ export class AboutBarComponent{
         this.router.navigate(['**']);
       }
     }
+
   public model: any;
   
   search = (text$: Observable<string>) =>
