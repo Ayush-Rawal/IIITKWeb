@@ -38,6 +38,7 @@ import { AdmissionsComponent } from './admissions/admissions.component';
 import { FeesRegistrationComponent } from './fees-registration/fees-registration.component';
 import { AdminSigninComponent } from './admin-signin/admin-signin.component';
 import { ImagesSlideComponent } from './images-slide/images-slide.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { ImagesSlideComponent } from './images-slide/images-slide.component';
     AdmissionsComponent,
     FeesRegistrationComponent,
     AdminSigninComponent,
-    ImagesSlideComponent
+    ImagesSlideComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +107,8 @@ import { ImagesSlideComponent } from './images-slide/images-slide.component';
       {path: 'academics/library', component: LibraryComponent},
       {path: 'academics/institute-events', component: InstituteEventsComponent},
       {path: 'institute/admissions', component: AdmissionsComponent},
-      {path: 'institute/fees-registration', component: FeesRegistrationComponent}
+      {path: 'institute/fees-registration', component: FeesRegistrationComponent},
+      {path: '**', component: ErrorPageComponent}
     ]),
   BrowserAnimationsModule
   ],
