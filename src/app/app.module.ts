@@ -22,7 +22,6 @@ import { PermanentFacultyComponent } from './permanent-faculty/permanent-faculty
 import { GuestFacultyComponent } from './guest-faculty/guest-faculty.component';
 import { NonTeachingStaffComponent } from './non-teaching-staff/non-teaching-staff.component';
 import { PlacementsComponent } from './placements/placements.component';
-// import { VacanciesComponent } from './vacancies/vacancies.component';
 import { TendersComponent } from './tenders/tenders.component';
 import { ExecutiveCouncilComponent } from './executive-council/executive-council.component';
 import { GoverningBodyComponent } from './governing-body/governing-body.component';
@@ -41,6 +40,7 @@ import { ImagesSlideComponent } from './images-slide/images-slide.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutSearchBarComponent } from './about-search-bar/about-search-bar.component';
 import { RtiComponent } from './rti/rti.component';
+import { VacanciesComponent } from './vacancies/vacancies.component';
 
 
 @NgModule({
@@ -59,7 +59,6 @@ import { RtiComponent } from './rti/rti.component';
     GuestFacultyComponent,
     NonTeachingStaffComponent,
     PlacementsComponent,
-    // VacanciesComponent,
     TendersComponent,
     ExecutiveCouncilComponent,
     GoverningBodyComponent,
@@ -79,7 +78,8 @@ import { RtiComponent } from './rti/rti.component';
     ImagesSlideComponent,
     ErrorPageComponent,
     AboutSearchBarComponent,
-    RtiComponent
+    RtiComponent,
+    VacanciesComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +96,7 @@ import { RtiComponent } from './rti/rti.component';
       {path: 'faculty/guest', component: GuestFacultyComponent},
       {path: 'faculty/non-teaching-staff', component: NonTeachingStaffComponent},
       {path: 'students/placement', component: PlacementsComponent},
-      // {path: 'vacancies', component: VacanciesComponent},
+      {path: 'vacancies', component: VacanciesComponent},
       {path: 'tenders', component: TendersComponent},
       {path: 'institute/executive-council', component: ExecutiveCouncilComponent},
       {path: 'institute/governing-body', component: GoverningBodyComponent},
