@@ -1,6 +1,6 @@
 <div class="row">
   <div class="card col-sm-3" style="width:15em" *ngFor="let x of res ; let i=index"  >
-    <img class="card-img-top" src={{x.url}} alt="Card image" style="width:14em;height:16em">
+    <img class="card-img-top rounded-circle img-thumbnail" src={{x.url}} alt="Card image" style="width:14em;height:16em">
     <div class="card-body">
       <h4 class="card-title">{{x.name}}</h4> <!-- student name -->
       <p class="card-text">{{x.title}}</p> <!--package at that company -->
@@ -8,4 +8,3 @@
   </div>
   <br>
 </div>
-
