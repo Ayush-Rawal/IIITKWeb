@@ -13,7 +13,7 @@ export class NavBarComponent {
     "links": [
       {
         name: "Institute",
-        link: "institute",
+        link: "",
         sublinks: [
           {
             name: "Executive Council",
@@ -43,7 +43,7 @@ export class NavBarComponent {
         ]
       }, {
         name: "Academics",
-        link: "/academics",
+        link: "",
         sublinks: [
           {
             name: "Departments",
@@ -67,7 +67,7 @@ export class NavBarComponent {
         ]
       }, {
         "name": "Faculty",
-        "link": "/faculty",
+        "link": "",
         "sublinks": [
           {
             "name": "Contract Faculty",
@@ -84,7 +84,7 @@ export class NavBarComponent {
         ]
       }, {
           "name": "Students",
-          "link": "/students",
+          "link": "",
           "sublinks": [
             {
               name: "Current Batches",
