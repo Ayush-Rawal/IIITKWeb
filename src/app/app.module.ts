@@ -40,6 +40,7 @@ import { AdminSigninComponent } from './admin-signin/admin-signin.component';
 import { ImagesSlideComponent } from './images-slide/images-slide.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutSearchBarComponent } from './about-search-bar/about-search-bar.component';
+import { RtiComponent } from './rti/rti.component';
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import { AboutSearchBarComponent } from './about-search-bar/about-search-bar.com
     AdminSigninComponent,
     ImagesSlideComponent,
     ErrorPageComponent,
-    AboutSearchBarComponent
+    AboutSearchBarComponent,
+    RtiComponent
   ],
   imports: [
     BrowserModule,
@@ -110,7 +112,7 @@ import { AboutSearchBarComponent } from './about-search-bar/about-search-bar.com
       {path: 'academics/institute-events', component: InstituteEventsComponent},
       {path: 'institute/admissions', component: AdmissionsComponent},
       {path: 'institute/fees-registration', component: FeesRegistrationComponent},
-      {path: 'aboutbar', component: AboutSearchBarComponent},
+      {path: 'rti', component: RtiComponent},
       {path: '**', component: ErrorPageComponent}
     ]),
   BrowserAnimationsModule
