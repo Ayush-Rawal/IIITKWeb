@@ -1,17 +1,9 @@
-th
-{
-font-size: 1.6em;
-text-align: center;
+h1 {
+    text-align: center;
+    flex: 2;
 }
-tr{    
-font-size: 1.2em;
-}
-/* .tr-hover:hover
-{
-font-size: 1.6em;
-} */
-td
-{
-text-align: center;
-font-size: 1.2em;
+
+table {
+    margin: 2em 0;
+    flex: 4;
 }
