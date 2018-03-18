@@ -89,3 +89,9 @@ body {
       margin-top: 7rem;
     }
   }
+  .responsive
+  {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }

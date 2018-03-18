@@ -29,7 +29,8 @@ export class QuickLinksComponent {
       }
     ]
     routing(model:string)
-    { model=model.toLowerCase();
+    { 
+      model=model.toLowerCase();
       if(model=="admin")
       this.router.navigate(['../admin']);
       
@@ -41,11 +42,11 @@ export class QuickLinksComponent {
 
       
       else if(model=="students")
-      this.router.navigate(['../students/placement']);
+      this.router.navigate(['../students/current-batches']);
 
       
       else if(model=="placement")
-      this.router.navigate(['../students/current-batches']);
+      this.router.navigate(['../students/placement']);
 
       
       else if(model=="fee structure")
@@ -65,6 +66,10 @@ export class QuickLinksComponent {
       else if(model=="scholarships")
       this.router.navigate(['../academics/scholarships']);
 
+      else
+      {
+        this.router.navigate(['**']);
+      }
     }
   public model: any;
   
