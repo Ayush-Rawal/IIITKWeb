@@ -16,6 +16,6 @@ a:first-child {
 
 .responsive {
     float: right;
-    transform: translateY(15%);
+    margin-top: 0.2em;
     margin-right: 3em;
 }
