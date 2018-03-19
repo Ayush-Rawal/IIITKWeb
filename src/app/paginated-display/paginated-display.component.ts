@@ -23,38 +23,38 @@ import {
 export class PaginatedDisplayComponent {
 
   constructor() { }
-  public content = {
-    title:"Title",
+  public content= {
+    title:"Latest News",
     btnDisp:"Gimme More!",
     btnLink:"",
     items:[
       {
-        content:"Content 1",
+        content:"Internships and Placements",
+        link:"../students/placement"
+      },{
+        content:"Institute Scholarships",
+        link:"../academics/scholarships"
+      },{
+        content:"Vidyalaxmi Portal For Education Loan",
+         link:"" //don't think we should make a component for this
+      },{
+        content:"Notice for appointment on deputation basis",
+        link:"../vacancies"
+      },{
+        content:"Advertisement for the 14 Posts of the Director IIIT (PPP) under MHRD",
+        link:"../vacancies"
+      },{
+        content:"Faculty Positions at IIIT-K date extended",
+        link:"../vacancies"
+      },{
+        content:"Orientation Program",
+        link:"" //no need of component for it
+      },{
+        content:"IIIT Kota declared as institute of national importance",
         link:""
       },{
-        content:"Content 2",
-        link:""
-      },{
-        content:"Content 3",
-        link:""
-      },{
-        content:"Content 4",
-        link:""
-      },{
-        content:"Content 5",
-        link:""
-      },{
-        content:"Content 6",
-        link:""
-      },{
-        content:"Content 7",
-        link:""
-      },{
-        content:"Content 8",
-        link:""
-      },{
-        content:"Content 9",
-        link:""
+        content:"Guest Faculty",
+        link:"../faculty/guest"
       },{
         content:"Content 10",
         link:""
@@ -106,6 +106,7 @@ export class PaginatedDisplayComponent {
       }
     ]
   }
+  
   public currPage = 1;
   public perPage = 6;
   public maxPage = Math.ceil(this.content.items.length/this.perPage);

@@ -1,0 +1,83 @@
+public content= {
+    title:"Latest News",
+    btnDisp:"Gimme More!",
+    btnLink:"",
+    items:[
+      {
+        content:"IIIT Kota celebrated yoga day",
+        link:"../academics/institute-events"
+      },{
+        content:"Swachh Bharat Mission",
+        link:"../academics/institute-events"
+      },{
+        content:"Ek Bharat Shrestha Bharat",
+         link:"academics/institute-events"
+      },{
+        content:"IIIT Kota Events",
+        link:"academics/institute-events"
+      },{
+        content:"Content 5",
+        link:""
+      },{
+        content:"Content 6",
+        link:""
+      },{
+        content:"Content 7",
+        link:"" 
+      },{
+        content:"Content 8",
+        link:""
+      },{
+        content:"Content 9",
+        link:""
+      },{
+        content:"Content 10",
+        link:""
+      },{
+        content:"Content 11",
+        link:""
+      },{
+        content:"Content 12",
+        link:""
+      },{
+        content:"Content 13",
+        link:""
+      },{
+        content:"Content 14",
+        link:""
+      },{
+        content:"Content 15",
+        link:""
+      },{
+        content:"Content 16",
+        link:""
+      },{
+        content:"Content 17",
+        link:""
+      },{
+        content:"Content 18",
+        link:""
+      },{
+        content:"Content 19",
+        link:""
+      },{
+        content:"Content 20",
+        link:""
+      },{
+        content:"Content 21",
+        link:""
+      },{
+        content:"Content 22",
+        link:""
+      },{
+        content:"Content 23",
+        link:""
+      },{
+        content:"Content 24",
+        link:""
+      },{
+        content:"Content 25",
+        link:""
+      }
+    ]
+  }

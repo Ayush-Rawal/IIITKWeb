@@ -76,3 +76,6 @@ li {
 ul[role=pagination] {
     margin: 0.1rem 0;
 }
+span:hover{
+cursor: pointer;
+}
