@@ -62,6 +62,7 @@ export class LibraryComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0,0);
   }
 
 }

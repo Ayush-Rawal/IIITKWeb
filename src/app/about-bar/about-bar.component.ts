@@ -57,6 +57,8 @@ export class AboutBarComponent{
       {
         this.router.navigate(['**']);
       }
+      
+
     }
   public model: any;
   

@@ -10,6 +10,7 @@ export class ErrorPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.scrollTo(0,0);
   }
 
 }

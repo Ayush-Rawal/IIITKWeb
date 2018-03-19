@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.css']
 })
+<<<<<<< HEAD
 export class StudentsComponent {
 
   constructor() { }
@@ -35,5 +36,17 @@ export class StudentsComponent {
       link: "/pdf/Students/2017-ECE.pdf"
     }
   ]
+=======
+export class StudentsComponent implements OnInit {
+  res:any[];
+  constructor(http:Http) {
+    http.get("http://jsonplaceholder.typicode.com/photos").subscribe(response=>{
+      this.res=response.json();
+    }); //end point for displaying the students pdf link
+   }
+  ngOnInit() {
+      window.scrollTo(0,0);
+      }
+>>>>>>> 3c20512... done the above stuff mentioned
 
 }

@@ -14,6 +14,7 @@ export class PlacementsComponent implements OnInit {
     }); //end point for displaying the placed students
    }
   ngOnInit() {
-  }
+      window.scrollTo(0,0);
+      }
 
 }

@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'tenders',
   templateUrl: './tenders.component.html',
   styleUrls: ['./tenders.component.css']
 })
-export class TendersComponent {
+export class TendersComponent implements OnInit{
 
   constructor() { }
 
@@ -37,4 +37,7 @@ export class TendersComponent {
     }
   ]
 
+  ngOnInit(){
+  window.scrollTo(0,0);
+  }
 }
