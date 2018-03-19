@@ -38,6 +38,8 @@ import { FeesRegistrationComponent } from './fees-registration/fees-registration
 import { AdminSigninComponent } from './admin-signin/admin-signin.component';
 import { ImagesSlideComponent } from './images-slide/images-slide.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { VacanciesComponent } from './vacancies/vacancies.component'
+import { RtiComponent } from './rti/rti.component'
 
 @NgModule({
   declarations: [
@@ -73,6 +75,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     AdminSigninComponent,
     ImagesSlideComponent,
     ErrorPageComponent,
+    VacanciesComponent,
+    RtiComponent
   ],
   imports: [
     BrowserModule,
