@@ -20,18 +20,18 @@ a:first-child {
 @media(max-width:575px){
     .responsive{
         float: right;
-        margin-bottom: 3em;
-        margin-right: 0em;
+        margin-top: 0.2em;
+        
     }
     .my-form {
-        width: 20vw;
+        width: 7.8em;
     }
 }
 @media(min-width:576px){
     .responsive {
         float: right;
         margin-top: 0.2em;
-        margin-right: 3em;
+        margin-right: 4em;
     }
     .my-form {
         width: 11em;
