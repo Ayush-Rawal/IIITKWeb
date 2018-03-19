@@ -12,8 +12,9 @@ a:first-child {
 
 @media(max-width:575px){
     a{
-        font-size: 0.67em;
+        font-size: 0.6em;
     }
+
 }
 
 @media(max-width:575px){
@@ -23,7 +24,7 @@ a:first-child {
         margin-right: 0em;
     }
     .my-form {
-        width: 30vw;
+        width: 20vw;
     }
 }
 @media(min-width:576px){
