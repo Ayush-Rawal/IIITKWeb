@@ -51,15 +51,15 @@ export class GoverningBodyComponent implements OnInit {
     minutes: [
       {
         title: "Minutes of 1st meeting of the Governing Body",
-        link: "",
+        link: "/pdf/Governing-Body/MoM-of-1st-GB.pdf",
         timestamp: "June 6, 2013"
       }, {
         title: "Minutes of 2nd meeting of the Governing Body",
-        link: "",
+        link: "/pdf/Governing-Body/MoM-of-2nd-GB.pdf",
         timestamp: "July 9, 2014"
       }, {
         title: "Minutes of 3rd meeting of the Governing Body",
-        link: "",
+        link: "/pdf/Governing-Body/MoM-of-3rd-GB.pdf",
         timestamp: "March 27, 2017"
       }
     ]
