@@ -1,17 +1,17 @@
 <div class="container table-responsive-md"> 
-        <table class="table table-bordered table-hover">
-          <thead class="thead-light">
-            <tr>
-              <th>BATCH</th>
-              <th>STUDENTS LIST</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr  *ngFor="let x of res">
-            <td>{{x.title}}</td>
-            <td class="td-hover"><a href="{{x.url}}" target="_blank">{{x.thumbnailUrl}}</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th>BATCH</th>
+        <th>STUDENTS LIST</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let batch of content">
+      <td>{{batch.batch}}</td>
+      <td class="td-hover"><a href="{{batch.link}}" target="_blank">link</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
       
