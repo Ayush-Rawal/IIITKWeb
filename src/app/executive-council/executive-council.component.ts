@@ -32,31 +32,31 @@ export class ExecutiveCouncilComponent {
       {
         title: "Minutes of 1st meeting of EC",
         timestamp: "July 24, 2014",
-        link: "#"
+        link: "/pdf/Executive-Council/MoM-of-1st-EC.pdf"
       }, {
         title: "Minutes of 2nd meeting of EC",
         timestamp: "Oct 13, 2014",
-        link: "#"
+        link: "/pdf/Executive-Council/MoM-of-2nd-EC.pdf"
       }, {
         title: "Minutes of 3rd meeting of EC",
         timestamp: "June 05, 2015",
-        link: "#"
+        link: "/pdf/Executive-Council/MoM-of-3rd-EC.pdf"
       }, {
         title: "Minutes of 4th meeting of EC",
         timestamp: "Feb 15, 2016",
-        link: "#"
+        link: "/pdf/Executive-Council/MoM-of-4th-EC.pdf"
       }, {
         title: "Minutes of 5th meeting of EC",
         timestamp: "June 27, 2016",
-        link: "#"
+        link: "/pdf/Executive-Council/MoM-of-5th-EC.pdf"
       }, {
         title: "Minutes of 6th meeting of EC",
         timestamp: "Dec 14, 2016",
-        link: "#"
+        link: "/pdf/Executive-Council/MoM-of-6th-EC.pdf"
       }, {
         title: "Minutes of 7th meeting of EC",
         timestamp: "June 24, 2017",
-        link: "#"
+        link: "/pdf/Executive-Council/MoM-of-7th-EC.pdf"
       }
     ]
   }
