@@ -104,15 +104,15 @@ export class SenateComponent {
     minutes: [
       {
         title: "Minutes of 1st Meeting of the Senate",
-        link: "#",
+        link: "/pdf/Senate/Mom-1st-senate.pdf",
         timestamp: "Oct 4, 2015"
       }, {
         title: "Minutes of 2nd Meeting of the Senate",
-        link: "#",
+        link: "/pdf/Senate/Mom-2nd-senate.pdf",
         timestamp: "June 24, 2017"
       }, {
         title: "Minutes of 3rd Meeting of the Senate",
-        link: "#",
+        link: "/pdf/Senate/Mom-3rd-senate.pdf",
         timestamp: "December 2, 2017"
       }
     ]
