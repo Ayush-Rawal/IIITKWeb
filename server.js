@@ -1,7 +1,11 @@
 const express = require('express');
 const morgan = require('morgan')
 const fs = require('fs')
+const bodyparser = require('body-parser');
+
 const app = express();
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended: true}))
 
 const logStream = fs.createWriteStream(`${__dirname}/server/.log`, {flags: 'a'})
 app.use(morgan('dev', {stream: logStream}))
