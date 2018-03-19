@@ -6,6 +6,10 @@ const app = express();
 const logStream = fs.createWriteStream(`${__dirname}/server/.log`, {flags: 'a'})
 app.use(morgan('dev', {stream: logStream}))
 
+app.get('/pdf/:folder/:file', (req,res) => {
+    res.sendFile(`${__dirname}/src/assets/pdf/${req.params.folder}/${req.params.file}`)
+})
+
 app.use(express.static(__dirname + '/dist'))
 
 app.listen(process.env.PORT || 8080, ()=>{
