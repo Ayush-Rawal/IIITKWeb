@@ -10,12 +10,29 @@ a:first-child {
     margin-left: 1em;
 }
 
-.form-control {
-    width: 30vw;
+@media(max-width:575px){
+    a{
+        font-size: 0.67em;
+    }
 }
 
-.responsive {
-    float: right;
-    margin-top: 0.2em;
-    margin-right: 3em;
+@media(max-width:575px){
+    .responsive{
+        float: right;
+        margin-bottom: 3em;
+        margin-right: 0em;
+    }
+    .my-form {
+        width: 30vw;
+    }
+}
+@media(min-width:576px){
+    .responsive {
+        float: right;
+        margin-top: 0.2em;
+        margin-right: 3em;
+    }
+    .my-form {
+        width: 11em;
+    }
 }

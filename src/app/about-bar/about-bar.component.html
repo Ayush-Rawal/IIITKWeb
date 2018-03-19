@@ -3,7 +3,7 @@
     <a routerLink="/about">About IIIT-Kota </a> |
     <a href="http://www.iiitkota.ac.in/" target="_blank">Old Website</a>
     <div class="responsive">
-        <input id="typeahead-basic" type="text" (keyup.Enter)="routing(model)"  [(ngModel)]="model"
+        <input id="typeahead-basic" type="text" (keyup.Enter)="routing(model)"  class="my-form" [(ngModel)]="model"
             [ngbTypeahead]="search" placeholder="Quick Search"/>
     </div>
 </div>
