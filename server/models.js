@@ -9,7 +9,7 @@ module.exports = {
         },
         vision: {
             title: String,
-            content: String    
+            content: String
         },
         mission: {
             title: String,
@@ -43,6 +43,14 @@ module.exports = {
         minutes: [subSchema.minute]
     }),
 
+    guestFaculty: mongoose.model('guestFaculty', {
+        name: String,
+        department: String,
+        contact: String
+    }),
+
+    // TODO: Events
+
     library: mongoose.model('library', {
         library: [{
             name: String,
@@ -56,6 +64,16 @@ module.exports = {
             name: String,
             link: String,
             sublinks: [subSchema.link]
+        }]
+    }),
+
+    news: mongoose.model('news', {
+        title: String,
+        btnDisp: String,
+        btnLink: String,
+        items: [{
+            content: String,
+            link: String
         }]
     }),
 
@@ -74,6 +92,12 @@ module.exports = {
         }]
     }),
 
+    // TODO: Placements
+
+    quickLinks: mongoose.model('quickLinks', {
+        links: [subSchema.link]
+    }),
+
     senate: mongoose.model('senate', {
         mentor: [subSchema.representative],
         external: [subSchema.representative],
@@ -85,12 +109,10 @@ module.exports = {
     students: mongoose.model('students', {
         batch: String,
         link: String
-    }),  
+    }),
 
-    quickLinks: mongoose.model('quickLinks', {
-        links: [subSchema.link]
-    })
-
-
+    // TODO: Tenders
+    // TODO: Timetable
+    // TODO: Vacancies
 
 }
