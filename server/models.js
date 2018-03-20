@@ -51,9 +51,27 @@ module.exports = {
         }]
     }),
 
-    students: mongoose.model('students', {
-        batch: String,
-        link: String
+    navbar: mongoose.model('navbar', {
+        links: [{
+            name: String,
+            link: String,
+            sublinks: [subSchema.link]
+        }]
+    }),
+
+    nonTeachingStaff: mongoose.model('nonTeachingStafff', {
+        staff: [{
+            name: String,
+            contact: String
+        }]
+    }),
+
+    permanentFaculty: mongoose.model('permanentFaculty', {
+        faculty: [{
+            name: String,
+            department: String,
+            contact: String
+        }]
     }),
 
     senate: mongoose.model('senate', {
@@ -63,6 +81,15 @@ module.exports = {
         student: [subSchema.representative],
         minutes: [subSchema.minute]
     }),
+
+    students: mongoose.model('students', {
+        batch: String,
+        link: String
+    }),  
+
+    quickLinks: mongoose.model('quickLinks', {
+        links: [subSchema.link]
+    })
 
 
 
