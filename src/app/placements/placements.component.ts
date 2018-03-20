@@ -1,4 +1,3 @@
-import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'placements',
@@ -7,12 +6,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlacementsComponent implements OnInit {
 
-  res:any[];
-  constructor(http:Http) {
-    http.get("http://jsonplaceholder.typicode.com/photos").subscribe(response=>{
-      this.res=response.json();
-    }); //end point for displaying the placed students
-   }
+  constructor() { }
+
+   public content = [
+     {
+       image: "https://placeimg.com/600/600/any",
+       name: "name",
+       details: "details details details details ..."
+     }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }, {
+      image: "https://placeimg.com/600/600/any",
+      name: "name",
+      details: "details details details details ..."
+    }
+   ]
+
   ngOnInit() {
       window.scrollTo(0,0);
       }

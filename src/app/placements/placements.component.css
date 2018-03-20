@@ -9,5 +9,11 @@ img {
 }
 
 div.card {
-    margin: 1em 0;
+    margin: 1em 0.3em;
+    flex: 1 15em;
+}
+
+div[container] {
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
