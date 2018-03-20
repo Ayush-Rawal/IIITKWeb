@@ -5,13 +5,13 @@ const bodyparser = require('body-parser');
 const mongoose = require('mongoose')
 const cors = require('cors')
 const compression = require('compression')
-
-
-app.use(compression())
+const helmet = require('helmet')
 
 const app = express();
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
+app.use(compression())
+app.use(helmet())
 
 const logStream = fs.createWriteStream(`${__dirname}/server/.log`, {flags: 'a'})
 app.use(morgan('dev', {stream: logStream}))
