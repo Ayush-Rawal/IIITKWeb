@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const compression = require('compression')
 const helmet = require('helmet')
+const handlers = require('./server/handlers')
 
 const app = express();
 app.use(bodyparser.json());
@@ -30,6 +31,10 @@ db.once('open', function() {
 app.get('/pdf/:folder/:file', (req,res) => {
     res.sendFile(`${__dirname}/src/assets/pdf/${req.params.folder}/${req.params.file}`)
 })
+
+
+app.get('/api/:component', (req, res) => handlers.GETall(req, res, req.params.component))
+
 
 app.use(express.static(__dirname + '/dist'))
 

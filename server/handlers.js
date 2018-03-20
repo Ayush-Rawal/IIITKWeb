@@ -1,0 +1,20 @@
+const models = require('./models')
+
+module.exports = {
+
+    GETall (req, res, comp) {
+        const components =  Object.keys(models)
+        for (const component of components) {
+            if (comp === component) {
+                return models[component].find((err, content) => {
+                    if (err) {
+                        console.error(err)
+                        return res.status(500).send(err)
+                    }
+                    return res.status(200).json(content)
+                })
+            }
+        } 
+        return res.status(404).json({msg: "Endpoint does not exist \uD83D\uDE0C"})
+    }
+}

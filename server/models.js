@@ -50,6 +50,7 @@ module.exports = {
     }),
 
     // TODO: Events
+    // TODO: Events display (for paginated display)
 
     library: mongoose.model('library', {
         library: [{
