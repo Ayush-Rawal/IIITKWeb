@@ -92,7 +92,11 @@ module.exports = {
         }]
     }),
 
-    // TODO: Placements
+    placements: mongoose.model('placements', {
+        image: String,
+        name: String,
+        details: String
+    }),
 
     quickLinks: mongoose.model('quickLinks', {
         links: [subSchema.link]
