@@ -20,8 +20,7 @@ export class QuickLinksComponent {
         "name": "About us",
         "link": "/about"
       }, {
-        name: "Old Website",
-        link: "http://iiitkota.ac.in"
+
       }
     ]
 
