@@ -30,8 +30,25 @@ module.exports = {
                         }
                         return res.status(500).json(err)
                     }
-                    return res.status(200).send(newContent)
-                })        
+                    return res.status(200).json(newContent)
+                })
+            }
+        }
+    },
+
+    PUTall (req, res, comp) {
+        const components =  Object.keys(models)
+        for (const component of components) {
+            if (comp === component) {
+                models[component].findOneAndUpdate(req.body.old, req.body.new , {new: true, runValidators: true}, (err, newContent) => {
+                    if (err) {
+                        if(err.name === 'ValidationError') {
+                            return res.status(400).json({msg: `Invalid data, make sure data confirms to schema and try again \uD83D\uDE1B`})
+                        }
+                        return res.status(500).json(err)
+                    }
+                    return res.status(200).json(newContent)                    
+                })
             }
         }
     }

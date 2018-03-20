@@ -37,6 +37,10 @@ app.get('/api/:component', (req, res) => handlers.GETall(req, res, req.params.co
 
 app.post('/api/:component', (req, res) => handlers.POSTall(req, res, req.params.component))
 
+app.put('/api/:component', (req, res) => handlers.PUTall(req, res, req.params.component))
+
+app.del
+
 
 app.use(express.static(__dirname + '/dist'))
 
