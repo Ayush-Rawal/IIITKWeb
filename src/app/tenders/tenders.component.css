@@ -18,3 +18,15 @@ div[container] {
     flex-flow: column nowrap;
     padding: 1.5em 1em;
 }
+.links{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.links a{
+    flex:1;
+    margin: 1em 3em;
+    font-size: 1.4vw;
+    text-align: center;
+}
+

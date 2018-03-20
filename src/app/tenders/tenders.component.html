@@ -4,12 +4,15 @@
 
   <div class="card text-center" *ngFor="let tender of content" >
    <div class="card-header">
-      <h2>Tender</h2>
+      <h2>{{tender.name}}</h2>
    </div>
     <div class="card-body">
-      <h4 class="card-title">{{tender.title}}</h4>
+      <h4 class="card-title">{{tender.desc}}</h4>
       <p class="card-text">{{tender.content}}</p>
-      <a href={{tender.link}} class="btn btn-primary btn-lg">View Tender</a>
+      <div class="container links">
+      <a href={{tender.osublink.link}} class="btn btn-primary btn-lg" *ngIf=tender.osublink.link>{{tender.osublink.name}}</a>
+      <a href={{tender.link.link}} class="btn btn-primary btn-lg">{{tender.link.name}}</a>
+      </div>
     </div>
   </div>
 </div>
