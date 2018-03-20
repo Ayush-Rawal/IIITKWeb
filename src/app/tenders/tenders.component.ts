@@ -23,10 +23,10 @@ export class TendersComponent implements OnInit{
       }
     },
     {
-      "name": "Limited Tender Inquiry for Supply & Installation of Furniture for Classroom",
-      "desc": "IIITK/11/2017-18",
+      "name": "",
+      "desc": "",
       "link": {
-        "name":"Tender Document",
+        "name":"",
         "link":""
            },
       "osublink":{

@@ -1,12 +1,24 @@
+<div container>
 
-<div class="container">
-  <h1>Academic Calendar</h1>
-  <div class="card">
+  <h1>Time Table</h1>
 
-    <div class="card-body" >
-      <p>Last Updated on-</p>
-      <!-- pdfs go here -->
+  <div class="card text-center" >
+   <div class="card-header">
+      <h2>{{content.timetable.name}}</h2>
+   </div>
+    <div class="card-body">
+      <h4 class="card-title">{{content.timetable.lastupdate}}</h4>
+      <p class="card-text">View Time Table <a href="{{content.timetable.link}}" target="_blank">here</a></p>
     </div>
   </div>
 
+  <div class="card text-center" *ngFor="let calendar of content.calendar">
+    <div class="card-header">
+       <h2>{{calendar.name}}</h2>
+    </div>
+     <div class="card-body">
+       <!-- <h4 class="card-title"></h4> -->
+       <p class="card-text">View Calendar <a href="{{calendar.link}}" target="_blank">here</a></p>
+     </div>
+   </div>
 </div>
