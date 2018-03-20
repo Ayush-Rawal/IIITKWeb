@@ -4,16 +4,16 @@ const subSchema = require('./subschemas')
 module.exports = {
     about: mongoose.model('about', {
         about: {
-            title: String,
-            content: String
+            title: {type: String, required: true},
+            content: {type: String, required: true}
         },
         vision: {
-            title: String,
-            content: String
+            title: {type: String, required: true},
+            content: {type: String, required: true}
         },
         mission: {
-            title: String,
-            content: String
+            title: {type: String, required: true},
+            content: {type: String, required: true}
         }
     }),
 

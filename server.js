@@ -35,6 +35,8 @@ app.get('/pdf/:folder/:file', (req,res) => {
 
 app.get('/api/:component', (req, res) => handlers.GETall(req, res, req.params.component))
 
+app.post('/api/:component', (req, res) => handlers.POSTall(req, res, req.params.component))
+
 
 app.use(express.static(__dirname + '/dist'))
 
