@@ -4,6 +4,10 @@ const fs = require('fs')
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose')
 const cors = require('cors')
+const compression = require('compression')
+
+
+app.use(compression())
 
 const app = express();
 app.use(bodyparser.json());
