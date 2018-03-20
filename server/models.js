@@ -22,7 +22,7 @@ module.exports = {
         prevCoordinator: [subSchema.prevCoordinator]
     }),
 
-    department: mongoose.model('departments', {
+    departments: mongoose.model('departments', {
         name: String,
         start: String,
         info: String

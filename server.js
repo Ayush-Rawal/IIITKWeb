@@ -39,7 +39,7 @@ app.post('/api/:component', (req, res) => handlers.POSTall(req, res, req.params.
 
 app.put('/api/:component', (req, res) => handlers.PUTall(req, res, req.params.component))
 
-app.del
+app.delete('/api/:component', (req, res) => handlers.DELall(req, res, req.params.component))
 
 
 app.use(express.static(__dirname + '/dist'))
