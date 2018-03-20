@@ -1,9 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'quick-links',
@@ -24,7 +19,10 @@ export class QuickLinksComponent {
       }, {
         "name": "About us",
         "link": "/about"
+      }, {
+        name: "Old Website",
+        link: "http://iiitkota.ac.in"
       }
     ]
-    
+
 }
