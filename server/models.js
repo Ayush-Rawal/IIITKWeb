@@ -23,9 +23,9 @@ module.exports = {
     }),
 
     departments: mongoose.model('departments', {
-        name: String,
-        start: String,
-        info: String
+        name: {type: String, required: true},
+        start: {type: String, required: true},
+        info: {type: String, required: true}
     }),
 
     director: mongoose.model('director', {
@@ -34,19 +34,19 @@ module.exports = {
     }),
 
     executiveCouncil: mongoose.model('executiveCouncil',{
-        council: [subSchema.representative],
-        minutes: [subSchema.minute]
+        council: {type: [subSchema.representative], required: true},
+        minutes: {type: [subSchema.minute], required: true}
     }),
 
     governingBody: mongoose.model('governingBody', {
-        executives: [subSchema.representative],
-        minutes: [subSchema.minute]
+        executives: {type: [subSchema.representative], required: true},
+        minutes: {type: [subSchema.minute], required: true}
     }),
 
     guestFaculty: mongoose.model('guestFaculty', {
-        name: String,
-        department: String,
-        contact: String
+        name: {type: String, required: true},
+        department: {type: String, required: true},
+        contact: {type: String, required: true}
     }),
 
     // TODO: Events
@@ -54,66 +54,66 @@ module.exports = {
 
     library: mongoose.model('library', {
         library: [{
-            name: String,
+            name: {type: String, required: true},
             info: String,
-            links: [subSchema.link]
+            links: {type: [subSchema.link], required: true}
         }]
     }),
 
     navbar: mongoose.model('navbar', {
         links: [{
-            name: String,
-            link: String,
-            sublinks: [subSchema.link]
+            name: {type: String, required: true},
+            link: {type: String, required: true},
+            sublinks: {type: [subSchema.link], required: true}
         }]
     }),
 
     news: mongoose.model('news', {
-        title: String,
-        btnDisp: String,
-        btnLink: String,
+        title: {type: String, required: true},
+        btnDisp: {type: String, required: true},
+        btnLink: {type: String, required: true},
         items: [{
-            content: String,
-            link: String
+            content: {type: String, required: true},
+            link: {type: String, required: true}
         }]
     }),
 
     nonTeachingStaff: mongoose.model('nonTeachingStafff', {
         staff: [{
-            name: String,
-            contact: String
+            name: {type: String, required: true},
+            contact: {type: String, required: true}
         }]
     }),
 
     permanentFaculty: mongoose.model('permanentFaculty', {
         faculty: [{
-            name: String,
-            department: String,
-            contact: String
+            name: {type: String, required: true},
+            department: {type: String, required: true},
+            contact: {type: String, required: true}
         }]
     }),
 
     placements: mongoose.model('placements', {
         image: String,
-        name: String,
-        details: String
+        name: {type: String, required: true},
+        details: {type: String, required: true}
     }),
 
     quickLinks: mongoose.model('quickLinks', {
-        links: [subSchema.link]
+        links: {type: [subSchema.link], required: true}
     }),
 
     senate: mongoose.model('senate', {
-        mentor: [subSchema.representative],
-        external: [subSchema.representative],
-        industry: [subSchema.representative],
-        student: [subSchema.representative],
-        minutes: [subSchema.minute]
+        mentor: {type: [subSchema.representative], required: true},
+        external: {type: [subSchema.representative], required: true},
+        industry: {type: [subSchema.representative], required: true},
+        student: {type: [subSchema.representative], required: true},
+        minutes: {type: [subSchema.minute], required: true}
     }),
 
     students: mongoose.model('students', {
-        batch: String,
-        link: String
+        batch: {type: String, required: true},
+        link: {type: String, required: true}
     }),
 
     // TODO: Tenders
