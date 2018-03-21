@@ -8,7 +8,7 @@ module.exports = {
         if (index === -1) {
             res.status(404).json({msg: 'Nope, wrong endpoint \uD83D\uDE0C'})
         } else {
-            return models[component].find((err, content) => {
+            return models[components[index]].find((err, content) => {
                 if (err) {
                     console.error(err)
                     return res.status(500).json(err)
