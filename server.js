@@ -13,6 +13,7 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(compression())
 app.use(helmet())
+app.use(express.csrf())
 
 const logStream = fs.createWriteStream(`${__dirname}/server/.log`, {flags: 'a'})
 app.use(morgan('dev', {stream: logStream}))
