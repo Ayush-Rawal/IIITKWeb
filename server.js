@@ -6,9 +6,22 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const compression = require('compression')
 const helmet = require('helmet')
+const redisClient = require('redis').createClient()
 const handlers = require('./server/handlers')
 
 const app = express();
+
+const limiter = require('express-limiter')(app, redisClient)
+
+// Limit 100 req per ip per hour
+// TODO: Test if 100 req per hour are enough, this will be done after all content is made dynamic
+// TODO: find if opening a page again counts as multiple requests, this will help with the above TODO 
+limiter({
+    lookup: ['connection.remoteAddress'],
+    total: 100,
+    expire: 60 * 60 *1000
+})
+
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(compression())
