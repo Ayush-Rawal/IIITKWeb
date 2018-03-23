@@ -6,13 +6,14 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const compression = require('compression')
 const helmet = require('helmet')
+const session = require('express-session')
 const redisClient = require('redis').createClient()
+const redisStore = require('connect-redis')(session)
 const handlers = require('./server/handlers')
 
 const app = express();
 
 const limiter = require('express-limiter')(app, redisClient)
-
 // Limit 100 req per ip per hour
 // TODO: Test if 100 req per hour are enough, this will be done after all content is made dynamic
 // TODO: find if opening a page again counts as multiple requests, this will help with the above TODO 
@@ -27,6 +28,28 @@ app.use(bodyparser.urlencoded({extended: true}))
 app.use(compression())
 app.use(helmet())
 app.use(express.csrf())
+
+app.use(session({
+    name: 'Hello',
+    secret: "Big secret here hjvkhjsbflwefgjsvahcjbdb svbjkbv jhhctufdxfgfgjvbvbhbvn n    nb wdnc  dnc d asnv  sdan v ",
+    store: new redisStore({
+        client: redisClient
+    }),
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        path: '/',
+        httpOnly: true,
+        secure: true,
+        maxAge: 4 * 60 * 60 * 1000,
+    }
+}))
+app.use(function(req, res, next) {
+    if (!req.session) {
+        return next(new Error('Connection to redis lost. Check network connection and try again'))
+    }
+    next()
+})
 
 const logStream = fs.createWriteStream(`${__dirname}/server/.log`, {flags: 'a'})
 app.use(morgan('dev', {stream: logStream}))
