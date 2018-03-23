@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const compression = require('compression')
 const helmet = require('helmet')
+const csrf = require('csurf')
 const session = require('express-session')
 const redisClient = require('redis').createClient()
 const redisStore = require('connect-redis')(session)
@@ -27,7 +28,7 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(compression())
 app.use(helmet())
-app.use(express.csrf())
+app.use(csrf())
 
 app.use(session({
     name: 'Hello',
