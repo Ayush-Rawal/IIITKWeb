@@ -30,6 +30,11 @@ app.use(compression())
 app.use(helmet({
     dnsPrefetchControl: {
         allow: true
+    },
+    hsts: {
+        maxAge:31536000,
+        preload: true,
+        includeSubdomains: true
     }
 }))
 app.use(csrf())
