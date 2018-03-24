@@ -4,7 +4,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express');
 const morgan = require('morgan')
-const fs = require('fs')
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose')
 const cors = require('cors')
@@ -45,7 +44,6 @@ app.use(function(req, res, next) {
     if (!req.session) {
         return next(new Error('Connection to redis lost. Check network connection and try again'))
     }
-    console.log('session' + req.session.id)
     next()
 })
 
@@ -82,9 +80,7 @@ limiter({
     expire: 60 * 60 *1000
 })
 
-
-const logStream = fs.createWriteStream(`${__dirname}/server/.log`, {flags: 'a'})
-app.use(morgan('dev', {stream: logStream}))
+app.use(morgan('dev'))
 
 mongoose.connect(dbURL)
 const db = mongoose.connection;
