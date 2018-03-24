@@ -8,6 +8,8 @@ const compression = require('compression')
 const helmet = require('helmet')
 const csrf = require('csurf')
 const session = require('express-session')
+const cookieParser = require('cookie-parser')
+const secret =  process.env.SECRET || 'BIG SECRET GOES HERE'
 const redisClient = require('redis').createClient()
 const redisStore = require('connect-redis')(session)
 const handlers = require('./server/handlers')
@@ -18,11 +20,11 @@ const limiter = require('express-limiter')(app, redisClient)
 // Limit 100 req per ip per hour
 // TODO: Test if 100 req per hour are enough, this will be done after all content is made dynamic
 // TODO: find if opening a page again counts as multiple requests, this will help with the above TODO 
-limiter({
+/* limiter({
     lookup: ['connection.remoteAddress'],
     total: 100,
     expire: 60 * 60 *1000
-})
+}) */
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
@@ -35,13 +37,16 @@ app.use(helmet({
         maxAge:31536000,
         preload: true,
         includeSubdomains: true
-    }
+    },
+    // TODO: ADD hpkp configuration after we get certificate hashes
+
 }))
-app.use(csrf())
+
+app.use(cookieParser(secret))
 
 app.use(session({
     name: 'Hello',
-    secret: "Big secret here hjvkhjsbflwefgjsvahcjbdb svbjkbv jhhctufdxfgfgjvbvbhbvn n    nb wdnc  dnc d asnv  sdan v ",
+    secret: secret,
     store: new redisStore({
         client: redisClient
     }),
@@ -58,8 +63,11 @@ app.use(function(req, res, next) {
     if (!req.session) {
         return next(new Error('Connection to redis lost. Check network connection and try again'))
     }
+    console.log('session' + req.session.id)
     next()
 })
+
+app.use(csrf())
 
 const logStream = fs.createWriteStream(`${__dirname}/server/.log`, {flags: 'a'})
 app.use(morgan('dev', {stream: logStream}))
