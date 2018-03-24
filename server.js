@@ -76,8 +76,8 @@ const limiter = require('express-limiter')(app, redisClient)
 // EDIT: ^ does if page sends XHR
 limiter({
     lookup: ['connection.remoteAddress'],
-    total: 100,
-    expire: 60 * 60 *1000
+    total: 60,
+    expire: 10 * 60 *1000
 })
 
 app.use(morgan('dev'))
