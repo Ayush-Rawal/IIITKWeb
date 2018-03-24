@@ -5,6 +5,7 @@ const bodyparser = require('body-parser');
 const mongoose = require('mongoose')
 const cors = require('cors')
 const compression = require('compression')
+const favicon = require('serve-favicon')
 const helmet = require('helmet')
 const csrf = require('csurf')
 const session = require('express-session')
@@ -63,6 +64,8 @@ app.use(csrf())
 app.use(cors({
     origin: 'https://api.mlab.com'
 }))
+
+app.use(favicon(`${__dirname}/dist/favicon.ico`))
 
 const limiter = require('express-limiter')(app, redisClient)
 // Limit 100 req per ip per hour
