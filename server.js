@@ -27,7 +27,11 @@ limiter({
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(compression())
-app.use(helmet())
+app.use(helmet({
+    dnsPrefetchControl: {
+        allow: true
+    }
+}))
 app.use(csrf())
 
 app.use(session({
