@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+}
+
 const express = require('express');
 const morgan = require('morgan')
 const fs = require('fs')
@@ -10,10 +14,10 @@ const helmet = require('helmet')
 const csrf = require('csurf')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
-const secret =  process.env.SECRET || 'BIG SECRET GOES HERE'
+const secret =  process.env.SECRET
 const redisClient = require('redis').createClient()
 const redisStore = require('connect-redis')(session)
-const dbURL = process.env.dbURL || 'mongodb://AyushRawal:iiitkota@ds119059.mlab.com:19059/iiitkweb'
+const dbURL = process.env.dbURL
 const handlers = require('./server/handlers')
 
 const app = express();
