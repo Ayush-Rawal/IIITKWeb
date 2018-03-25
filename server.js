@@ -47,7 +47,9 @@ app.use(function(req, res, next) {
     next()
 })
 
-app.use(bodyparser.json());
+app.use(bodyparser.json({
+    type: ['json', 'application/csp-report']
+}));
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(helmet({
     dnsPrefetchControl: {
@@ -72,7 +74,9 @@ app.use(helmet.contentSecurityPolicy({
         defaultSrc: ["'self"],
         styleSrc: ["'self", 'maxcdn.bootstrapcdn.com'],
         fontSrc: ["'self", 'fonts.googleapis.com'],
-        imgSrc: ["'self'", 'placeimg.com']
+        imgSrc: ["'self'", 'placeimg.com'],
+        reportUri: '/reports/csp',
+        upgradeInsecureRequests: true
     },
     browserSniff: true,
     reportOnly: process.env.NODE_ENV !== 'production'
@@ -104,6 +108,15 @@ app.get('/pdf/:folder/:file', (req,res) => {
     res.sendFile(`${__dirname}/src/assets/pdf/${req.params.folder}/${req.params.file}`)
 })
 
+app.post('/reports/csp', (req, res) => {
+    if (req.body) {
+        console.log(`CSP Violation: ${req.body}`)
+      } else {
+        console.log('CSP Violation: No data received!')
+      }
+
+      res.status(204).end()
+})
 
 app.get('/api/:component', (req, res) => handlers.GETall(req, res, req.params.component))
 
