@@ -67,6 +67,17 @@ app.use(cors({
     origin: 'https://api.mlab.com'
 }))
 
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+        defaultSrc: ["'self"],
+        styleSrc: ["'self", 'maxcdn.bootstrapcdn.com'],
+        fontSrc: ["'self", 'fonts.googleapis.com'],
+        imgSrc: ["'self'", 'placeimg.com']
+    },
+    browserSniff: true,
+    reportOnly: process.env.NODE_ENV !== 'production'
+}))
+
 app.use(favicon(`${__dirname}/dist/favicon.ico`))
 
 const limiter = require('express-limiter')(app, redisClient)
