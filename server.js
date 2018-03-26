@@ -14,9 +14,8 @@ const csrf = require('csurf')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const secret =  process.env.SECRET
-const redisClient = require('redis').createClient()
+const redisClient = require('redis').createClient(process.env.REDIS_PORT ,process.env.REDIS_URL)
 const redisStore = require('connect-redis')(session)
-const dbURL = process.env.dbURL
 const handlers = require('./server/handlers')
 
 const app = express();
@@ -24,6 +23,14 @@ const app = express();
 app.use(compression())
 
 app.use(cookieParser(secret))
+
+redisClient.auth(process.env.REDIS_PASS, (err, reply) => {
+    if (err) {
+        console.error(`Redis auth error: ${err}`)
+    } else {
+        console.log(`Redis connected, reply: ${reply}`)
+    }
+})
 
 app.use(session({
     name: 'Hello',
@@ -71,12 +78,12 @@ app.use(cors({
 
 app.use(helmet.contentSecurityPolicy({
     directives: {
-        defaultSrc: ["'self"],
-        styleSrc: ["'self", 'maxcdn.bootstrapcdn.com'],
-        fontSrc: ["'self", 'fonts.googleapis.com'],
+        defaultSrc: ["'self'"],
+        styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com'],
+        fontSrc: ["'self'", 'fonts.googleapis.com', 'fonts.gstatic.com'],
         imgSrc: ["'self'", 'placeimg.com'],
         reportUri: '/reports/csp',
-        upgradeInsecureRequests: true
+        // upgradeInsecureRequests: true
     },
     browserSniff: true,
     reportOnly: process.env.NODE_ENV !== 'production'
@@ -97,11 +104,11 @@ limiter({
 
 app.use(morgan('dev'))
 
-mongoose.connect(dbURL)
+mongoose.connect(process.env.MONGO_URL)
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-    console.log('DB Connected')
+    console.log('Mongo Connected')
 });
 
 app.get('/pdf/:folder/:file', (req,res) => {
