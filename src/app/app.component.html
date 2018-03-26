@@ -1,10 +1,10 @@
-<about-bar></about-bar>
-<div role="logo">
+<about-bar *ngIf="false"></about-bar>
+<div role="logo" *ngIf="false">
     <img src="./../../assets/logo.svg" alt="IIIT-Kota logo"  >
 </div>
-<nav-bar></nav-bar>
+<!-- <navbar ></navbar> -->
 <router-outlet></router-outlet>
-<div role="footer">
+<div role="footer" *ngIf="false">
     <div class="container">
         <quick-links></quick-links>
         <quick-contact-us></quick-contact-us>

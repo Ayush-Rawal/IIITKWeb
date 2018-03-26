@@ -40,7 +40,8 @@ import { AdminSigninComponent } from './admin-signin/admin-signin.component';
 import { ImagesSlideComponent } from './images-slide/images-slide.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { VacanciesComponent } from './vacancies/vacancies.component'
-import { RtiComponent } from './rti/rti.component'
+import { RtiComponent } from './rti/rti.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component'
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { RtiComponent } from './rti/rti.component'
     ImagesSlideComponent,
     ErrorPageComponent,
     VacanciesComponent,
-    RtiComponent
+    RtiComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -111,6 +113,7 @@ import { RtiComponent } from './rti/rti.component'
       {path: 'institute/admissions', component: AdmissionsComponent},
       {path: 'institute/fees-registration', component: FeesRegistrationComponent},
       {path: 'rti', component: RtiComponent},
+      {path: 'abcd', component: AdminDashboardComponent},
       {path: '**', component: ErrorPageComponent}
     ]),
   BrowserAnimationsModule
