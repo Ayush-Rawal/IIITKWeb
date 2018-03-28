@@ -83,20 +83,17 @@ app.use(cors({
 app.use(helmet.contentSecurityPolicy({
     directives: {
         defaultSrc: ["'self'"],
-        styleSrc: [
-            "'self'",
-            'maxcdn.bootstrapcdn.com',
-            'fonts.googleapis.com',
-            "'unsafe-inline'"
-            // TODO: Add script hashes when deploying
-        ],
+        styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com', 'fonts.googleapis.com', "'unsafe-inline'"
+            // TODO: Add style hashes when deploying! 
+    ],
         fontSrc: ["'self'", 'fonts.gstatic.com'],
-        imgSrc: ["'self'", 'placeimg.com'],
+        imgSrc: ["'self'", 'placeimg.com', 'data:'],
         reportUri: '/reports/csp',
-        // upgradeInsecureRequests: true
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        upgradeInsecureRequests: process.env.NODE_ENV === 'production'
     },
     browserSniff: true,
-    reportOnly: process.env.NODE_ENV !== 'production'
+    reportOnly: process.env.NODthatE_ENV !== 'production'
 }))
 
 app.use(favicon(`${__dirname}/dist/favicon.ico`))
