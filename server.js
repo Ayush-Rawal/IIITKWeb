@@ -67,6 +67,9 @@ app.use(helmet({
         preload: true,
         includeSubdomains: true
     },
+    frameguard: {
+        action: 'deny'
+    }
     // TODO: ADD hpkp configuration after we get certificate hashes
 
 }))
