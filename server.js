@@ -32,6 +32,10 @@ redisClient.auth(process.env.REDIS_PASS, (err, reply) => {
     }
 })
 
+redisClient.on('error', function (err) {
+    console.log(`Redis Error: ${err}`)
+})
+
 app.use(session({
     name: 'Hello',
     secret: secret,
