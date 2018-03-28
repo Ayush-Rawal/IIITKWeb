@@ -63,8 +63,8 @@ module.exports = {
     navbar: mongoose.model('navbar', {
         links: [{
             name: {type: String, required: true},
-            link: {type: String, required: true},
-            sublinks: {type: [subSchema.link], required: true}
+            link: {type: String},
+            sublinks: {type: [subSchema.link]}
         }]
     }),
 
@@ -78,7 +78,7 @@ module.exports = {
         }]
     }),
 
-    nonTeachingStaff: mongoose.model('nonTeachingStafff', {
+    nonTeachingStaff: mongoose.model('nonTeachingStaff', {
         staff: [{
             name: {type: String, required: true},
             contact: {type: String, required: true}
@@ -112,8 +112,10 @@ module.exports = {
     }),
 
     students: mongoose.model('students', {
-        batch: {type: String, required: true},
-        link: {type: String, required: true}
+        students: { type: [{
+            batch: {type: String, required: true},
+            link: {type: String, required: true}
+        }], required: true } 
     }),
 
     // TODO: Tenders

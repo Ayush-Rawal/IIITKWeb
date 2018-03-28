@@ -1,23 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service'
 
 @Component({
   selector: 'coordinator',
   templateUrl: './coordinator.component.html',
   styleUrls: ['./coordinator.component.css']
 })
-export class CoordinatorComponent {
+export class CoordinatorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   public content = {
     coordinator: {
       name: "Dr. Rakesh Jain",
       email: "rjain.mnit@gmail.com",
-      office: "Coordinator, IIIT Kota,\n\
-              Dept. of Mechanical Engineering,MNIT Jaipur",
-      education: "Ph.D.(Operations Management) from Liverpool John Moores University, Liverpool, UK\n\
-                  M.E.(Industrial Engg.) from National Institute of Industrial Engineering\n\
-                  B.E.(Mechanical Engineering) from University of Rajsthan",
+      office: ["Coordinator, IIIT Kota,",
+              "Dept. of Mechanical Engineering,MNIT Jaipur"],
+      education: ["Ph.D.(Operations Management) from Liverpool John Moores University, Liverpool, UK",
+                  "M.E.(Industrial Engg.) from National Institute of Industrial Engineering",
+                  "B.E.(Mechanical Engineering) from University of Rajsthan"],
       phone: "0141-2715080",
       website: "http://www.mnit.ac.in/faculty/profile.php?fid=40",
       tenure: "January 2018 on wards"
@@ -34,6 +35,11 @@ export class CoordinatorComponent {
         tenure: "July 2013 to April 2015"
       }
     ]
+  }
+
+  ngOnInit () {
+    this.api.getData('/api/coordinator')
+    .subscribe((res) => this.content = res.json()[0])
   }
 
 }

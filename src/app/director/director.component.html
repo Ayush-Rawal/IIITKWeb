@@ -4,7 +4,9 @@
   <div role="director">
     <img src="../../assets/director.jpg" alt="Director, IIIT Kota" class="img-thumbnail float-right" width="17.17%" height="17.17%"/>
     <p>{{content.director.name}}</p>
-    <p>Office: {{content.director.office}}</p>
+    <p>Office: 
+      <p *ngFor="let address of content.director.office">{{address}}</p>
+    </p>
     <p>Phone: {{content.director.phone}}</p>
     <p><a href="mailto:{{content.director.email}}">Email: {{content.director.email}}</a></p>
     <p>Website: <a href={{content.director.website}}>{{content.director.website}}</a></p>

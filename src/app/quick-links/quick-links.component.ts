@@ -19,8 +19,6 @@ export class QuickLinksComponent {
       }, {
         "name": "About us",
         "link": "/about"
-      }, {
-
       }
     ]
 

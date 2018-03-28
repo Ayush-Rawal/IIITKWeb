@@ -13,9 +13,9 @@ export class DirectorComponent {
   public content = {
     director: {
       name: "Prof. Uday Kumar Yaragatti",
-      office: "Director, MNIT Jaipur \n \
-      1st Floor, Prabha Bhawan\
-      MNIT Jaipur, JLN Marg, Jaipur – 302017",
+      office: ["Director, MNIT Jaipur",
+      "1st Floor, Prabha Bhawan",
+      "MNIT Jaipur, JLN Marg, Jaipur – 302017"],
       phone: "+91 141 2529087",
       email: "director@mnit.ac.in",
       website: "http://mnit.ac.in/admin/director.php",

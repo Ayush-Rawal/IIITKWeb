@@ -4,8 +4,11 @@
     <div role="coordinator">
       <img src="../../assets/coordinator.jpeg" alt="Coordinator, IIIT Kota" class="img-thumbnail float-right" width="20%" height="20%"/>
       <p>{{content.coordinator.name}}</p>
-      <p>Office: {{content.coordinator.office}}</p>
-      <p>Education: {{content.coordinator.education}}</p>
+      <p>Office: 
+        <p *ngFor="let address of content.coordinator.office">{{address}}</p>
+      </p>
+      <p>Education:</p>
+      <p *ngFor="let education of content.coordinator.education">{{education}}</p>
       <p>Phone: {{content.coordinator.phone}}</p>
       <p><a href="mailto:{{content.coordinator.email}}">Email: {{content.coordinator.email}}</a></p>
       <p>Website: <a href={{content.coordinator.website}}>{{content.coordinator.website}}</a></p>
