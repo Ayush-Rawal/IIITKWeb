@@ -14,6 +14,7 @@ const csrf = require('csurf')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const secret =  process.env.SECRET
+const uuidv4 = require('uuid/v4')
 const redisClient = require('redis').createClient(process.env.REDIS_PORT ,process.env.REDIS_URL)
 const redisStore = require('connect-redis')(session)
 const handlers = require('./server/handlers')
@@ -58,6 +59,15 @@ app.use(bodyparser.json({
     type: ['json', 'application/csp-report']
 }));
 app.use(bodyparser.urlencoded({extended: true}))
+
+app.use(function(req, res, next) {
+    res.locals.nonce = []
+    res.locals.nonce.push(uuidv4())
+    res.locals.nonce.push(uuidv4())
+    res.locals.nonce.push(uuidv4())
+    res.locals.nonce.push(uuidv4())
+})
+
 app.use(helmet({
     dnsPrefetchControl: {
         allow: true
