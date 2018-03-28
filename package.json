@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "ng": "ng",
-        "start": "pm2 start server.js && pm2 link vps7v42hps6nxtt kve5nvpibbiv8ns heroku",
+        "start": "pm2 start server.js && pm2 link vps7v42hps6nxtt kve5nvpibbiv8ns",
         "build": "ng build --prod",
         "test": "ng test",
         "lint": "ng lint",
