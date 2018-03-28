@@ -66,6 +66,7 @@ app.use(function(req, res, next) {
     res.locals.nonce.push(uuidv4())
     res.locals.nonce.push(uuidv4())
     res.locals.nonce.push(uuidv4())
+    next()
 })
 
 app.use(helmet({
@@ -92,8 +93,8 @@ app.use(cors({
 app.use(helmet.contentSecurityPolicy({
     directives: {
         defaultSrc: ["'self'"],
-        styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com'],
-        fontSrc: ["'self'", 'fonts.googleapis.com', 'fonts.gstatic.com'],
+        styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com', 'fonts.googleapis.com'],
+        fontSrc: ["'self'", 'fonts.gstatic.com'],
         imgSrc: ["'self'", 'placeimg.com'],
         reportUri: '/reports/csp',
         // upgradeInsecureRequests: true
