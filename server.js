@@ -22,9 +22,9 @@ const app = express();
 
 app.use(compression())
 
-sslify.https({
-    trustProtoHeader: process.env.IS_LOAD_BALANCED
-})
+app.use(sslify.HTTPS({
+    trustProtoHeader: !!process.env.IS_LOAD_BALANCED
+}))
 
 redisClient.auth(process.env.REDIS_PASS, (err, reply) => {
     if (err) {
