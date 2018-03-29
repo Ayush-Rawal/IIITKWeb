@@ -74,6 +74,9 @@ app.use(helmet({
     },
     frameguard: {
         action: 'deny'
+    },
+    referrerPolicy: {
+        policy: 'strict-origin-when-cross-origin'
     }
     // TODO: ADD hpkp configuration after we get certificate hashes
 
