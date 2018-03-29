@@ -34,7 +34,7 @@ redisClient.on('error', function (err) {
 })
 
 app.use(session({
-    name: 'Hello',
+    name: 'Yo!',
     secret: secret,
     store: new redisStore({
         client: redisClient
