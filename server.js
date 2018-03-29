@@ -100,7 +100,7 @@ app.use(helmet.contentSecurityPolicy({
         upgradeInsecureRequests: process.env.NODE_ENV === 'production'
     },
     browserSniff: true,
-    reportOnly: process.env.NODE_ENV === 'production'
+    reportOnly: process.env.NODE_ENV !== 'production'
 }))
 
 app.use(favicon(`${__dirname}/dist/favicon.ico`))
