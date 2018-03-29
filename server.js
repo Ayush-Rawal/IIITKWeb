@@ -95,7 +95,7 @@ app.use(helmet.contentSecurityPolicy({
     ],
         fontSrc: ["'self'", 'fonts.gstatic.com'],
         imgSrc: ["'self'", 'placeimg.com', 'data:'],
-        reportUri: '/reports/csp',
+        reportUri: 'https://iiitkweb.report-uri.com/r/d/csp/enforce',
         scriptSrc: ["'self'"],
         upgradeInsecureRequests: process.env.NODE_ENV === 'production'
     },
@@ -127,16 +127,6 @@ db.once('open', function() {
 
 app.get('/pdf/:folder/:file', (req,res) => {
     res.sendFile(`${__dirname}/src/assets/pdf/${req.params.folder}/${req.params.file}`)
-})
-
-app.post('/reports/csp', (req, res) => {
-    if (req.body) {
-        console.log(`CSP Violation: ${req.body}`)
-      } else {
-        console.log('CSP Violation: No data received!')
-      }
-
-      res.status(204).end()
 })
 
 app.get('/api/:component', (req, res) => handlers.GETall(req, res, req.params.component))
