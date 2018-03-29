@@ -96,7 +96,7 @@ app.use(helmet.contentSecurityPolicy({
         fontSrc: ["'self'", 'fonts.gstatic.com'],
         imgSrc: ["'self'", 'placeimg.com', 'data:'],
         reportUri: '/reports/csp',
-        scriptSrc: ["'self'", "'unsafe-inline'"],
+        scriptSrc: ["'self'"],
         upgradeInsecureRequests: process.env.NODE_ENV === 'production'
     },
     browserSniff: true,
