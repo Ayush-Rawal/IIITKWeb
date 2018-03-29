@@ -16,10 +16,15 @@ const secret =  process.env.SECRET
 const redisClient = require('redis').createClient(process.env.REDIS_PORT ,process.env.REDIS_URL)
 const redisStore = require('connect-redis')(session)
 const handlers = require('./server/handlers')
+const sslify = require('express-sslify')
 
 const app = express();
 
 app.use(compression())
+
+sslify.https({
+    trustProtoHeader: process.env.IS_LOAD_BALANCED
+})
 
 redisClient.auth(process.env.REDIS_PASS, (err, reply) => {
     if (err) {
