@@ -12,7 +12,6 @@ const favicon = require('serve-favicon')
 const helmet = require('helmet')
 const csrf = require('csurf')
 const session = require('express-session')
-const cookieParser = require('cookie-parser')
 const secret =  process.env.SECRET
 const redisClient = require('redis').createClient(process.env.REDIS_PORT ,process.env.REDIS_URL)
 const redisStore = require('connect-redis')(session)
@@ -21,8 +20,6 @@ const handlers = require('./server/handlers')
 const app = express();
 
 app.use(compression())
-
-app.use(cookieParser(secret))
 
 redisClient.auth(process.env.REDIS_PASS, (err, reply) => {
     if (err) {
@@ -47,7 +44,7 @@ app.use(session({
     cookie: {
         path: '/',
         httpOnly: true,
-        secure: (process.env.NODE_ENV === 'production')? true : false,
+        secure: process.env.NODE_ENV === 'production',
         maxAge: 4 * 60 * 60 * 1000,
     }
 }))
@@ -61,7 +58,6 @@ app.use(function(req, res, next) {
 app.use(bodyparser.json({
     type: ['json', 'application/csp-report']
 }));
-app.use(bodyparser.urlencoded({extended: true}))
 
 app.use(helmet({
     dnsPrefetchControl: {
