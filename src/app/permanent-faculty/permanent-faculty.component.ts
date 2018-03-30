@@ -53,7 +53,7 @@ export class PermanentFacultyComponent implements OnInit {
   public content;
   ngOnInit()
   {
-    this.api.getData('/api/executiveCouncil').subscribe(
+    this.api.getData('/api/permanentFaculty').subscribe(
       res=>{
        this.content=res.json(); 
       }

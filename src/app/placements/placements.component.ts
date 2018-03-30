@@ -56,7 +56,7 @@ export class PlacementsComponent implements OnInit {
   public content;
   ngOnInit()
   {
-    this.api.getData('/api/executiveCouncil').subscribe(
+    this.api.getData('/api/placements').subscribe(
       res=>{
        this.content=res.json(); 
       }

@@ -46,7 +46,7 @@ export class NonTeachingStaffComponent implements OnInit {
   public content;
   ngOnInit()
   {
-    this.api.getData('/api/executiveCouncil').subscribe(
+    this.api.getData('/api/nonTeachingStaff').subscribe(
       res=>{
        this.content=res.json(); 
       }
