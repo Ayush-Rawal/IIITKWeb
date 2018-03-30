@@ -7,6 +7,7 @@ import { ApiService } from '../services/api.service'
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  
 
   constructor(private api: ApiService) { }
 
@@ -15,7 +16,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.api.getData('/api/about')
     .subscribe((res) => this.content = res.json()[0])
-    window.scrollTo(0, 0)
+    window.scrollTo(0,0);
   }
 
 }
