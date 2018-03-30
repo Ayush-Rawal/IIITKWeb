@@ -16,6 +16,7 @@ const secret =  process.env.SECRET
 const redisClient = require('redis').createClient(process.env.REDIS_PORT ,process.env.REDIS_URL)
 const redisStore = require('connect-redis')(session)
 const handlers = require('./server/handlers')
+const logger = require('./server/logger')
 const sslify = require('express-sslify')
 
 const app = express();
@@ -30,14 +31,14 @@ if (process.env.NODE_ENV === 'production') {
 
 redisClient.auth(process.env.REDIS_PASS, (err, reply) => {
     if (err) {
-        console.error(`Redis auth error: ${err}`)
+        logger.error(`Redis auth error: ${err}`)
     } else {
-        console.log(`Redis connected, reply: ${reply}`)
+        logger.info(`Redis connected, reply: ${reply}`)
     }
 })
 
 redisClient.on('error', function (err) {
-    console.log(`Redis Error: ${err}`)
+    logger.error(`Redis Error: ${err}`)
 })
 
 app.use(session({
@@ -48,8 +49,8 @@ app.use(session({
     }),
     resave: false,
     saveUninitialized: false,
+    path: '/',
     cookie: {
-        path: '/',
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         maxAge: 4 * 60 * 60 * 1000,
@@ -119,13 +120,15 @@ limiter({
     expire: 10 * 60 *1000
 })
 
-app.use(morgan('dev'))
+app.use(morgan({ "stream": logger.stream }));
 
 mongoose.connect(process.env.MONGO_URL)
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+db.on('error', function(err) {
+    logger.error(`Mongo error: ${err}`)
+});
 db.once('open', function() {
-    console.log('Mongo Connected')
+    logger.info('Mongo Connected')
 });
 
 app.get('/pdf/:folder/:file', (req,res) => {
@@ -146,5 +149,5 @@ app.get('*', (req, res, next) => {
 })
 
 app.listen(process.env.PORT || 8080, ()=>{
-    console.log(`Server running on ${process.env.PORT || 8080}`);
+    logger.log(`Server running on ${process.env.PORT || 8080}`);
 });

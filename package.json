@@ -44,6 +44,7 @@
     "rxjs": "^5.5.6",
     "serve-favicon": "^2.4.5",
     "typescript": "~2.5.3",
+    "winston": "^2.4.1",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
