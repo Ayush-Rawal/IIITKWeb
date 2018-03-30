@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node ./node_modules/.bin/pm2-runtime server.js -i max",
+    "start": "node ./node_modules/.bin/pm2-runtime server.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
