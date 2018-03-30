@@ -1,3 +1,4 @@
+import { ApiService } from './../services/api.service';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'placements',
@@ -6,54 +7,60 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlacementsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api:ApiService) { }
 
-   public content = [
-     {
-       image: "https://placeimg.com/600/600/any",
-       name: "name",
-       details: "details details details details ..."
-     }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }
-   ]
+  //  public content = [
+  //    {
+  //      image: "https://placeimg.com/600/600/any",
+  //      name: "name",
+  //      details: "details details details details ..."
+  //    }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }, {
+  //     image: "https://placeimg.com/600/600/any",
+  //     name: "name",
+  //     details: "details details details details ..."
+  //   }
+  //  ]
 
-  ngOnInit() {
-      window.scrollTo(0,0);
+  public content;
+  ngOnInit()
+  {
+    this.api.getData('/api/executiveCouncil').subscribe(
+      res=>{
+       this.content=res.json(); 
       }
-
+    )
+  window.scrollTo(0,0);
+  }
 }
