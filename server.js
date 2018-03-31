@@ -18,8 +18,9 @@ const redisStore = require('connect-redis')(session)
 const handlers = require('./server/handlers')
 const logger = require('./server/logger')
 const sslify = require('express-sslify')
-const jwt = require('express-jwt');
-const jwksRsa = require('jwks-rsa');
+const jwt = require('express-jwt')
+const jwksRsa = require('jwks-rsa')
+const jwtAuthz = require('express-jwt-authz')
 
 const app = express();
 
@@ -148,13 +149,13 @@ app.get('/pdf/:folder/:file', (req,res) => {
     res.sendFile(`${__dirname}/src/assets/pdf/${req.params.folder}/${req.params.file}`)
 })
 
-app.get('/api/:component', checkJwt, (req, res) => handlers.GETall(req, res, req.params.component))
+app.get('/api/:component', checkJwt, jwtAuthz(['read:content']), (req, res) => handlers.GETall(req, res, req.params.component))
 
-app.post('/api/:component', checkJwt, (req, res) => handlers.POSTall(req, res, req.params.component))
+app.post('/api/:component', checkJwt, jwtAuthz(['create:content']), (req, res) => handlers.POSTall(req, res, req.params.component))
 
-app.put('/api/:component', checkJwt, (req, res) => handlers.PUTall(req, res, req.params.component))
+app.put('/api/:component', checkJwt, jwtAuthz(['modify:content']), (req, res) => handlers.PUTall(req, res, req.params.component))
 
-app.delete('/api/:component', checkJwt, (req, res) => handlers.DELall(req, res, req.params.component))
+app.delete('/api/:component', checkJwt, jwtAuthz(['delete:content']), (req, res) => handlers.DELall(req, res, req.params.component))
 
 app.use(express.static(__dirname + '/dist'))
 app.get('*', (req, res, next) => {
