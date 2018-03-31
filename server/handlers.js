@@ -6,7 +6,7 @@ module.exports = {
         const components =  Object.keys(models)
         const index = components.indexOf(comp)
         if (index === -1) {
-            res.status(404).json({msg: 'Nope, wrong endpoint \uD83D\uDE0C'})
+            res.status(404).json({code: 'Wololo', msg: 'Nope, wrong endpoint \uD83D\uDE0C'})
         } else {
             return models[components[index]].find((err, content) => {
                 if (err) {
@@ -22,7 +22,7 @@ module.exports = {
         const components =  Object.keys(models)
         const index = components.indexOf(comp)
         if (index === -1) {
-            res.status(404).json({msg: 'Nope, wrong endpoint \uD83D\uDE0C'})
+            res.status(404).json({code: 'Wololo', msg: 'Nope, wrong endpoint \uD83D\uDE0C'})
         } else {
             const newContent = new models[components[index]](req.body)
             newContent.save((err) => {
@@ -41,7 +41,7 @@ module.exports = {
         const components =  Object.keys(models)
         const index = components.indexOf(comp)
         if (index === -1) {
-            res.status(404).json({msg: 'Nope, wrong endpoint \uD83D\uDE0C'})    
+            res.status(404).json({code: 'Wololo',msg: 'Nope, wrong endpoint \uD83D\uDE0C'})    
             // res.status(404).json({msg: `You can't update what doesn't exist, maybe you wanted the POST req?`}).end()
         } else {
             models[components[index]].findOneAndUpdate(req.body.old, req.body.new , {new: true, runValidators: true}, (err, newContent) => {
@@ -62,7 +62,7 @@ module.exports = {
         const components = Object.keys(models)
         const index = components.indexOf(comp)
         if (index === -1) {
-            res.status(404).json({msg: 'Nope, wrong endpoint \uD83D\uDE0C'})
+            res.status(404).json({code: 'Wololo', msg: 'Nope, wrong endpoint \uD83D\uDE0C'})
             // res.status(404).json({msg: `Umm... the stuff you're trying to delete doesn't exist.`})        
         } else {
             models[components[index]].findOneAndRemove(req.body, (err, doc) => {
