@@ -120,7 +120,7 @@ limiter({
     expire: 10 * 60 *1000
 })
 
-app.use(morgan({ "stream": logger.stream }));
+app.use(morgan(`combined`, { "stream": logger.stream }));
 
 mongoose.connect(process.env.MONGO_URL)
 const db = mongoose.connection;

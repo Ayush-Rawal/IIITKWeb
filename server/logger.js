@@ -1,14 +1,15 @@
 const winston = require('winston');
+require('winston-papertrail').Papertrail
 winston.emitErrs = true;
 
 const logger = new winston.Logger({
     transports: [
         new winston.transports.File({
             level: 'info',
-            filename: './logs/all-logs.log',
+            filename: './server.log',
             handleExceptions: true,
             json: true,
-            maxsize: 5242880, //5MB
+            maxsize: 5242880,
             maxFiles: 5,
             colorize: false
         }),
@@ -17,6 +18,10 @@ const logger = new winston.Logger({
             handleExceptions: true,
             json: false,
             colorize: true
+        }),
+        new winston.transports.Papertrail({
+            host: 'logs3.papertrailapp.com',
+            port: 51264
         })
     ],
     exitOnError: false

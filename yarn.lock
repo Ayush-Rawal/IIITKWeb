@@ -3141,6 +3141,10 @@ globule@^1.0.0:
     lodash "~4.17.4"
     minimatch "~3.0.2"
 
+glossy@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/glossy/-/glossy-0.1.7.tgz#769b5984a96f6066ab9ea758224825ee6c210f0b"
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
@@ -8229,6 +8233,12 @@ wide-align@^1.1.0:
 window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
+
+winston-papertrail@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/winston-papertrail/-/winston-papertrail-1.0.5.tgz#54a23b16e5046652bf687b37dc802714bfd462c9"
+  dependencies:
+    glossy "^0.1.7"
 
 winston@^2.4.1:
   version "2.4.1"
