@@ -149,7 +149,7 @@ app.get('/pdf/:folder/:file', (req,res) => {
     res.sendFile(`${__dirname}/src/assets/pdf/${req.params.folder}/${req.params.file}`)
 })
 
-app.get('/api/:component', checkJwt, jwtAuthz(['read:content']), (req, res) => handlers.GETall(req, res, req.params.component))
+app.get('/api/:component', (req, res) => handlers.GETall(req, res, req.params.component))
 
 app.post('/api/:component', checkJwt, jwtAuthz(['create:content']), (req, res) => handlers.POSTall(req, res, req.params.component))
 
