@@ -157,6 +157,8 @@ app.put('/api/:component', checkJwt, jwtAuthz(['modify:content']), (req, res) =>
 
 app.delete('/api/:component', checkJwt, jwtAuthz(['delete:content']), (req, res) => handlers.DELall(req, res, req.params.component))
 
+app.options('/api', handlers.showEndpoints)
+
 app.use(express.static(__dirname + '/dist'))
 app.get('*', (req, res, next) => {
     res.status(200).sendFile(`${__dirname}/dist/index.html`)
