@@ -2,7 +2,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
-const express = require('express');
+const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
@@ -164,4 +164,4 @@ app.get('*', (req, res, next) => {
 
 app.listen(process.env.PORT || 8080, ()=>{
     logger.info(`Server running on ${process.env.PORT || 8080}`);
-});
+})
