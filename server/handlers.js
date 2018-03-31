@@ -73,5 +73,10 @@ module.exports = {
                 return res.status(200).json({msg: "Yay! Success!"})
             })
         }
+    },
+
+    showEndpoints (req, res) {
+        const endpoints = Object.keys(models)
+        res.status(200).json({endpoints})
     }
 }
