@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express');
 const morgan = require('morgan')
-const bodyparser = require('body-parser');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const cors = require('cors')
 const compression = require('compression')
@@ -18,6 +18,8 @@ const redisStore = require('connect-redis')(session)
 const handlers = require('./server/handlers')
 const logger = require('./server/logger')
 const sslify = require('express-sslify')
+const jwt = require('express-jwt');
+const jwksRsa = require('jwks-rsa');
 
 const app = express();
 
@@ -63,7 +65,7 @@ app.use(function(req, res, next) {
     next()
 })
 
-app.use(bodyparser.json({
+app.use(bodyParser.json({
     type: ['json', 'application/csp-report']
 }));
 
@@ -121,27 +123,38 @@ limiter({
 })
 
 app.use(morgan(`combined`, { "stream": logger.stream }));
+const checkJwt = jwt({
+    secret: jwksRsa.expressJwtSecret({
+      cache: true,
+      rateLimit: true,
+      jwksRequestsPerMinute: 5,
+      jwksUri: `https://ayushrawal.eu.auth0.com/.well-known/jwks.json`
+    }),
+    audience: 'https://iiitkweb.herokuapp.com/api/',
+    issuer: 'https://ayushrawal.eu.auth0.com/',
+    algorithms: [ 'RS256' ]
+})
 
 mongoose.connect(process.env.MONGO_URL)
 const db = mongoose.connection;
 db.on('error', function(err) {
     logger.error(`Mongo error: ${err}`)
-});
+})
 db.once('open', function() {
     logger.info('Mongo Connected')
-});
+})
 
 app.get('/pdf/:folder/:file', (req,res) => {
     res.sendFile(`${__dirname}/src/assets/pdf/${req.params.folder}/${req.params.file}`)
 })
 
-app.get('/api/:component', (req, res) => handlers.GETall(req, res, req.params.component))
+app.get('/api/:component', checkJwt, (req, res) => handlers.GETall(req, res, req.params.component))
 
-app.post('/api/:component', (req, res) => handlers.POSTall(req, res, req.params.component))
+app.post('/api/:component', checkJwt, (req, res) => handlers.POSTall(req, res, req.params.component))
 
-app.put('/api/:component', (req, res) => handlers.PUTall(req, res, req.params.component))
+app.put('/api/:component', checkJwt, (req, res) => handlers.PUTall(req, res, req.params.component))
 
-app.delete('/api/:component', (req, res) => handlers.DELall(req, res, req.params.component))
+app.delete('/api/:component', checkJwt, (req, res) => handlers.DELall(req, res, req.params.component))
 
 app.use(express.static(__dirname + '/dist'))
 app.get('*', (req, res, next) => {
@@ -149,5 +162,5 @@ app.get('*', (req, res, next) => {
 })
 
 app.listen(process.env.PORT || 8080, ()=>{
-    logger.log(`Server running on ${process.env.PORT || 8080}`);
+    logger.info(`Server running on ${process.env.PORT || 8080}`);
 });
