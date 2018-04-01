@@ -76,8 +76,24 @@ module.exports = {
         } 
     }),
 
-    // TODO: Events
-    // TODO: Paginated display
+    events: mongoose.model('events', {
+        carousel: [{
+            imgsrc: String,
+            headline: String,
+            summary: String
+        }],
+        iconic: [{
+            icon: String,
+            heading: String,
+            details: String
+        }],
+        complete: [{
+            imgsrc: String,
+            heading: String,
+            followup: String,
+            summary: String
+        }]
+    }),
 
     library: mongoose.model('library', {
         library: [{
@@ -161,5 +177,4 @@ module.exports = {
         },
         calendar: [subSchema.link]
     })
-    // TODO: Timetable
 }
