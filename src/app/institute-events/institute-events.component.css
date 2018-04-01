@@ -46,6 +46,7 @@ body {
   }
   .marketing h2 {
     font-weight: 400;
+    font-size: 1.5em;
   }
   .marketing .col-lg-4 p {
     margin-right: .75rem;
@@ -89,13 +90,8 @@ body {
       margin-top: 7rem;
     }
   }
-  .responsive
-  {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
   .responsive-event {
     width: 100%;
     height: auto;
+    max-height:500px;
 }
