@@ -15,7 +15,7 @@ module.exports = {
     
     director: new Schema({
         name: String,
-        office: String,
+        office: [String],
         email: String,
         website: String,
         tenure: String

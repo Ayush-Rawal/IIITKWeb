@@ -30,10 +30,10 @@ module.exports = {
 
     director: mongoose.model('director', {
         director: subSchema.director,
-        prevDirector: [subSchema.prevDirector]
+        prevDirector: subSchema.prevDirector
     }),
 
-    executiveCouncil: mongoose.model('executiveCouncil',{
+    executiveCouncil: mongoose.model('executiveCouncil', {
         council: {type: [subSchema.representative], required: true},
         minutes: {type: [subSchema.minute], required: true}
     }),
