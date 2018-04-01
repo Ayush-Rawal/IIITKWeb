@@ -76,7 +76,6 @@ module.exports = {
     },
 
     showEndpoints (req, res) {
-        const endpoints = Object.keys(models)
-        res.status(200).json({endpoints})
+        return res.status(200).json({endpoints: Object.keys(models)})
     }
 }
