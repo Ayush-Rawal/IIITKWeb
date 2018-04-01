@@ -31,8 +31,8 @@ module.exports = {
     coordinator: new Schema({
         name: String,
         email: String,
-        office: String,
-        education: String,
+        office: [String],
+        education: [String],
         phone: String,
         website: String,
         tenure: String
