@@ -2,6 +2,16 @@ const models = require('./models')
 
 module.exports = {
 
+    homeIsWhereTheHeartIs (req, res) {
+        models.home.find((err, content) => {
+            if (err) {
+                return res.status(500).json(err)
+            } else {
+                return res.status(200).json(content)
+            }
+        })
+    },
+
     GETall (req, res, comp) {
         const components =  Object.keys(models)
         const index = components.indexOf(comp)
@@ -10,7 +20,6 @@ module.exports = {
         } else {
             return models[components[index]].find((err, content) => {
                 if (err) {
-                    console.error(err)
                     return res.status(500).json(err)
                 }
                 return res.status(200).json(content)

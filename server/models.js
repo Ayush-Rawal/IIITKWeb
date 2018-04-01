@@ -49,7 +49,33 @@ module.exports = {
         contact: {type: String, required: true}
     }),
 
-    // TODO: Home
+    home: mongoose.model('home', {
+        news: {
+            type: {
+                title: {type: String, required: true},
+                btnDisp: {type: String, required: true},
+                btnLink: {type: String, required: true},
+                items: [{
+                    content: {type: String, required: true},
+                    link: {type: String, required: true}
+                }]
+            },
+            required: true
+        },
+        events: {
+            type: {
+                title: {type: String, required: true},
+                btnDisp: {type: String, required: true},
+                btnLink: {type: String, required: true},
+                items: [{
+                    content: {type: String, required: true},
+                    link: {type: String, required: true}
+                }]
+            },
+            required: true
+        } 
+    }),
+
     // TODO: Events
     // TODO: Paginated display
 
@@ -66,16 +92,6 @@ module.exports = {
             name: {type: String, required: true},
             link: {type: String},
             sublinks: {type: [subSchema.link]}
-        }]
-    }),
-
-    news: mongoose.model('news', {
-        title: {type: String, required: true},
-        btnDisp: {type: String, required: true},
-        btnLink: {type: String, required: true},
-        items: [{
-            content: {type: String, required: true},
-            link: {type: String, required: true}
         }]
     }),
 
@@ -113,10 +129,13 @@ module.exports = {
     }),
 
     students: mongoose.model('students', {
-        students: { type: [{
+        students: { 
+            type: [{
             batch: {type: String, required: true},
             link: {type: String, required: true}
-        }], required: true } 
+            }],
+            required: true
+        } 
     }),
 
     tenders: mongoose.model('tenders', {
