@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 @Component({
   selector: 'placements',
   templateUrl: './placements.component.html',
@@ -6,54 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlacementsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
-   public content = [
-     {
-       image: "https://placeimg.com/600/600/any",
-       name: "name",
-       details: "details details details details ..."
-     }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }, {
-      image: "https://placeimg.com/600/600/any",
-      name: "name",
-      details: "details details details details ..."
-    }
-   ]
+   public content
 
   ngOnInit() {
-      window.scrollTo(0,0);
+    this.api.getData('/api/placements')
+    .subscribe((res) => this.content = res.json())
+      window.scrollTo(0, 0)
       }
 
 }

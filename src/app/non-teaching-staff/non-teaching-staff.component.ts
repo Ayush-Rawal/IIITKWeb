@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 @Component({
   selector: 'non-teaching-staff',
   templateUrl: './non-teaching-staff.component.html',
   styleUrls: ['./non-teaching-staff.component.css']
 })
-export class NonTeachingStaffComponent {
+export class NonTeachingStaffComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   content = [
     {
@@ -42,4 +43,8 @@ export class NonTeachingStaffComponent {
     }
   ]
 
+  ngOnInit() {
+    this.api.getData('/api/nonTeachingStaff')
+    .subscribe((res) => res.json()[0].staff)
+  }
 }

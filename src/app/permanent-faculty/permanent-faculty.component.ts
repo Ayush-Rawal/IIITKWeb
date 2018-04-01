@@ -1,13 +1,13 @@
-import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 @Component({
   selector: 'permanent-faculty',
   templateUrl: './permanent-faculty.component.html',
   styleUrls: ['./permanent-faculty.component.css']
 })
-export class PermanentFacultyComponent {
+export class PermanentFacultyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   content = [
     {
@@ -49,4 +49,8 @@ export class PermanentFacultyComponent {
     }
   ]
 
+  ngOnInit() {
+    this.api.getData('/api/permanentFaculty')
+    .subscribe((res) => this.content = res.json()[0].faculty)
+  }
 }
