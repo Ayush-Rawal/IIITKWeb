@@ -9,32 +9,25 @@
     </ng-template>
   </ngb-carousel> 
 
-  <!-- Top events ends here -->
-
-
     <div class="container marketing">
 
-      <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4" *ngFor="let image of content.iconic">
           <img class="rounded-circle" src="{{image.icon}}" alt="More Events" width="160" height="160">
-          <h2>{{image.heading}}</h2>   <!--more stuffs go here -->
+          <h2>{{image.heading}}</h2>   
           <p>{{image.details}}</p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
+        </div>
+      </div>
 
       <hr class="featurette-divider">
 
-      <div class="row featurette" *ngFor="let image of content.complete">
-        <div class="col-md-7" > <!-- some sports meet like stuff  -->
-          <h2 class="featurette-heading">{{image.heading}}<span class="text-muted">{{image.followup}}</span></h2>
-          <p class="lead">{{image.summary}}</p>
+      <div class="row featurette" *ngFor="let event of content.complete">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">{{event.heading}}<p class="text-muted">{{event.followup}}</p></h2>
+          <p class="lead">{{event.summary}}</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-fluid mx-auto" src="{{image.imgsrc}}" alt="Generic placeholder image">
+          <img class="featurette-image img-fluid mx-auto" src="{{event.imgsrc}}" alt="Event image">
         </div>
       </div>
 
@@ -42,5 +35,5 @@
 
       <!-- /END THE FEATURETTES -->
 
-    </div><!-- /.container -->
+    </div>
   </main>
