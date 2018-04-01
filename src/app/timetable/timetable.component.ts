@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 
 @Component({
@@ -7,34 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timetable.component.css']
 })
 export class TimetableComponent implements OnInit {
-public content =
-  {
-   "timetable":
-            { 
-              "name":"Time-Table 2017-18 Even Semester",
-              "link":"",
-              "lastupdate":"Last updated on March 7",
-            },
-   "calendar":
-            [
-              {
-              "name":"IIIT-Kota Academic Calendar 2017-18 Odd Semester",
-              "link":"",  
-            },
-            {
-              "name":"IIIT-Kota Academic Calendar 2017-18 Even Semester",
-              "link":"",  
-            },
-            {
-              "name":"MNIT Academic Calendar - 2017-18(for reference)",
-              "link":"",  
-            }
-          ]         
-  }
+public content
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
+    this.api.getData('/api/timetable')
+    .subscribe((res) => this.content = res.json()[0])
   }
 
 }

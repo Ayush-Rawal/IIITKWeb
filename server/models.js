@@ -49,8 +49,9 @@ module.exports = {
         contact: {type: String, required: true}
     }),
 
+    // TODO: Home
     // TODO: Events
-    // TODO: Events display (for paginated display)
+    // TODO: Paginated display
 
     library: mongoose.model('library', {
         library: [{
@@ -118,8 +119,28 @@ module.exports = {
         }], required: true } 
     }),
 
-    // TODO: Tenders
-    // TODO: Timetable
-    // TODO: Vacancies
+    tenders: mongoose.model('tenders', {
+        tenders: {
+            type: [{
+                name: String,
+                desc: String,
+                link: subSchema.link,
+                sublink: subSchema.link
+            }],
+            required: true
+        }
+    }),
 
+    timetable: mongoose.model('timetable', {
+        timetable: {
+            type: {
+                name: String,
+                link: String,
+                lastupdate: String
+            },
+            required: true
+        },
+        calendar: [subSchema.link]
+    })
+    // TODO: Timetable
 }
