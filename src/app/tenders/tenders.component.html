@@ -10,8 +10,8 @@
       <h4 class="card-title">{{tender.desc}}</h4>
       <p class="card-text">{{tender.content}}</p>
       <div class="container links">
-      <a href={{tender.osublink.link}} class="btn btn-primary btn-lg" *ngIf=tender.osublink.link>{{tender.osublink.name}}</a>
-      <a href={{tender.link.link}} class="btn btn-primary btn-lg">{{tender.link.name}}</a>
+      <a href={{tender.sublink.link}} class="btn btn-primary btn-lg" *ngIf="tender.sublink" target="_blank">{{tender.sublink.name}}</a>
+      <a href={{tender.link.link}} class="btn btn-primary btn-lg" target="_blank">{{tender.link.name}}</a>
       </div>
     </div>
   </div>
