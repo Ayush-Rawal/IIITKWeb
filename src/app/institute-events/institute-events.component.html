@@ -28,8 +28,8 @@
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7" *ngFor="let image of content.complete"> <!-- some sports meet like stuff  -->
+      <div class="row featurette" *ngFor="let image of content.complete">
+        <div class="col-md-7" > <!-- some sports meet like stuff  -->
           <h2 class="featurette-heading">{{image.heading}}<span class="text-muted">{{image.followup}}</span></h2>
           <p class="lead">{{image.summary}}</p>
         </div>
